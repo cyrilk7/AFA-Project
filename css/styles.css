@@ -19,6 +19,9 @@ body{
     /* background-color: aqua; */
     height: 15%;
     margin-top: -30px;
+    position: fixed; /* Set the navbar to fixed position */
+    width: 100%;
+
 }
 
 .navbar-local .container-local{
@@ -31,6 +34,7 @@ body{
 .navbar-local a{
     text-decoration: none;
     color: whitesmoke;
+
 }
 
 .container-local{
@@ -93,7 +97,7 @@ p{
 
 .content-box-local{
     margin: auto;
-    margin-top: 60px;
+    margin-top: 200px;
     width: 50%;
     padding: 10px;
     text-align: center;
@@ -140,7 +144,7 @@ h1{
     width: 500px;
     height: 400px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 200px;
     border-radius: 20px;
     text-align: center;
 }
@@ -158,4 +162,24 @@ input{
     padding-left: 10px;
     font-size: 15px;
 
+}
+
+#fixtures-box{ 
+    padding: 100px;
+    margin-top: 65px;
+    
+}
+
+.box-1{
+    width: 1130px;
+    height: 230px;
+    background-color: #D9D9D9;
+    border-radius: 64px;
+    margin-bottom: 40px;
+    /* padding: 20px; */
+}
+
+#kasonoma-img{
+    width: 50px;
+    height: 10px;
 }
