@@ -103,6 +103,14 @@ p{
     text-align: center;
 }
 
+#standings{
+    padding: 0px 119px;
+    margin-top: 100px;
+    /* padding-top: 0px;
+    margin-top: 0px; */
+    
+}
+
 h1{
     font-style: normal;
     font-weight: 700;
@@ -165,7 +173,7 @@ input{
 }
 
 #fixtures-box{ 
-    padding: 100px;
+    padding: 117px;
     margin-top: 65px;
     
 }
@@ -179,7 +187,30 @@ input{
     /* padding: 20px; */
 }
 
-#kasonoma-img{
-    width: 50px;
-    height: 10px;
-}
+#league-table {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 23px;
+    border-collapse: collapse;
+    width: 100%;
+    color:#4A4747;
+  }
+  
+  #league-table td, #league-table th {
+    /* border: 1px solid white; */
+    padding: 8px;
+  }
+  
+  #league-table tr:nth-child(even){background-color: #D1D9D3;}
+  #league-table tr:nth-child(odd){background-color: white;}
+  
+  #league-table tr:hover {background-color: #ddd;}
+  
+  #league-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#EE1F12;
+    ;
+    color: white;
+  }
