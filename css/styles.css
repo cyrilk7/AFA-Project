@@ -1,4 +1,7 @@
-
+/* *{
+    margin: 0;
+    padding: 0;
+} */
 
 html, body{
     width: 100%;
@@ -118,7 +121,7 @@ h1{
     color: whitesmoke;
 }
 
-#p-white{
+.p-white{
     color: whitesmoke;
     font-weight: 100;
     font-size: 18px;
@@ -173,8 +176,7 @@ input{
 
 #fixtures-box{ 
     padding: 117px;
-    margin-top: 65px;
-    
+    margin-top: 65px; 
 }
 
 .box-1{
@@ -214,7 +216,70 @@ input{
     color: white;
   }
 
-#login-div{
+
+.login-container{
+    width: 100%;
     height: 100%;
-    background-color: #131313;
+    display: flex;
 }
+
+.login-container .left{
+    height: 100%;
+    width: 50%;
+    background-image: url(../images/login-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.login-container .right{
+    height: 100%;
+    width: 50%;
+
+}
+
+
+.login-text{
+    font-size: 40px;
+    padding-left: 119px;
+    line-height: 65px;
+
+
+
+}
+
+.left .login-text{
+    margin-top: 300px;
+}
+
+.right .login-text{
+    margin-top: 107px;
+    color:#EE1F12;
+}
+#back2home{
+    background: linear-gradient(132.37deg, #FF0F00 21.59%, #B45C57 104.34%);
+    border: none;
+    margin-left: 119px;
+}  
+
+
+.right .p-white{
+    padding-left: 119px;
+}
+
+.right input{
+    margin-left: 119px;
+    background:none;
+    border: 1px solid white;
+}
+
+label .p-white{
+    line-height: 0px;
+}
+
+.right .long-button{
+    width: 358px;
+    margin-left: 119px;
+    height: 60px;
+}
+
