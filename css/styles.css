@@ -16,7 +16,6 @@ body{
 
 
 .navbar-local{
-    /* background-color: aqua; */
     height: 15%;
     margin-top: -30px;
     position: fixed; /* Set the navbar to fixed position */
@@ -214,3 +213,8 @@ input{
     ;
     color: white;
   }
+
+#login-div{
+    height: 100%;
+    background-color: #131313;
+}
