@@ -165,15 +165,28 @@ h1{
 }
 
 input{
+    width: 335px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+    border: 1px solid;
+
+}
+
+select{
     width: 350px;
     height: 60px;
     margin-bottom: 20px;
     border-radius: 5px;
     padding-left: 10px;
     font-size: 15px;
+    border: 1px solid;
+    font: 'Poppins';
+    padding-right: 100px;
 
 }
-
 #fixtures-box{ 
     padding: 117px;
     margin-top: 65px; 
@@ -283,3 +296,23 @@ label .p-white{
     height: 60px;
 }
 
+.modal-title{
+    text-align: center!important;
+    color: #131313;
+}
+
+/* .close{
+    display: inline-block;
+    float: right;
+} */
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+
+}
+
+.modal-content{
+    background: #D9D9D9!important;
+}
