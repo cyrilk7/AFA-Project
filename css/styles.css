@@ -316,3 +316,38 @@ label .p-white{
 .modal-content{
     background: #D9D9D9!important;
 }
+
+#profile-img{
+    width: 60%;
+    height: 60%;
+    margin-left: 95px;
+    margin-top: 110px;
+}
+
+
+.profile-top{
+    display: flex;
+}
+
+.profile-left{
+    margin-right: -80px;
+}
+.profile-right h1{
+    margin-top: 150px;
+
+}
+
+#hr{
+    margin-top: -38px;
+    border: 2px solid red;
+    width: 900px;
+}
+
+.profile-bottom p{
+    margin-left: 119px;
+    line-height: 60px;
+}
+
+.profile-bottom span{
+    color: white
+}
