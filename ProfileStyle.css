@@ -6,7 +6,8 @@
 html, body{
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    font-family: Poppins, sans-serif;
 }
 
 /* rect{
@@ -20,26 +21,7 @@ html, body{
 } */
 
 /* Style for stat boxes */
-.StatBox{
-    border-style: solid;
-    border-radius: 2%;
-    padding: 5em 1em 5em;
-    margin: 1.5em
-    
-}
 
-.All-Stats {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .Stat {
-    width: 20em;
-    margin-bottom: 30px;
-    padding: 1em 2em 1em 1em;
-  }
 
   /*Page title Style*/
   #Page-Title{
@@ -47,38 +29,63 @@ html, body{
     padding: 0em 0em 0em 7.2em;
   }
 
-  /*Style for round images*/
-  .Stats-Pic{
-    display: flex;
-    border-radius: 70%;
-    max-width: 50%;
-    max-width: 50%;
-    margin: -65% 0% 50% 25%;;
-
-    
-  }
-
-  .Stat-Info{
-    color: white;
-    margin: auto;
-
-  }
-
-  .Stat-Title{
-    font-size: 5em;
-    margin: 0em 0.6em 0em 0.6em;
-  }
-
-  .Stat-Name{
-    margin: 0em 5em 0em 5em;
-  }
-
-  .Stat-Holder{
-
-    font-size: 2rem;
-    text-align: center;
+  .One-Profile{
+    border-style: solid ;
+    margin: 5em 5em 2em 5em;
+    border-color : #FF0F00;
+    max-width: 15em;
+    max-height: 15em;
    
+}
+
+.Team-Icon{
+    height: 70%;
+    width: 70%;
+
+    margin-bottom:2.2em ;
+    padding:0.5em 2em;
+    border-radius: 50%;
+}
+
+.Profiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
+
+  /**Link styling to prevent lines from being drawn underneath them and their color being changed to blue*/
+    a:link { text-decoration: none; }
+
+
+    a:visited { text-decoration: none; }
+
+
+    a:hover { text-decoration: none; }
+
+
+    a:active { text-decoration: none; }
+
+/**Styling for div that contains team names*/
+  .Name-Section{
+    display:flex;
+    justify-content: center;
+
+  }
+
+    /**Styling for the team names*/
+.Team-Name{
+    color: whitesmoke;
+    text-align:center;
+}
+
+/**Styling for figure and figcaption*/
+figure{
+    text-align: center;
+}
+
+
+
 
 body{
     background-image: url("../images/bg.png");
