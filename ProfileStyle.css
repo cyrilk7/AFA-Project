@@ -32,7 +32,8 @@ html, body{
   .One-Profile{
     border-style: solid ;
     margin: 5em 5em 2em 5em;
-    border-color : #FF0F00;
+    border-color : #d23b32;
+    border-radius: 2%;
     max-width: 15em;
     max-height: 15em;
    
