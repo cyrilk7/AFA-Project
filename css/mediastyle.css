@@ -1,0 +1,23 @@
+.media-container{
+  padding-left: 127px;
+  padding-right: 127px;
+  margin-top: 85px;
+}
+
+
+.row{
+  display:flex;
+  margin-bottom: 5%;
+}
+
+.video{
+  
+  margin-right: 5%;
+  height: 100%;
+}
+
+.row img{
+  margin-bottom: -6px;
+  border: 0.35em solid #FF0F00;
+  border-radius: 3%;
+}
