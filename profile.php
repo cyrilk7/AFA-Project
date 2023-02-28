@@ -38,7 +38,7 @@
         <h1> Team Profiles </h1>
         <div class="profile-row" style = "display:flex;">
             <div class="profile-box" >
-            <a href="kasanoma.php">
+            <a href="kasanoma.php?teamid=1">
                 <div class="profile-img">
                     <img src="images/kasanoma.png" alt="" >
                 </div>
