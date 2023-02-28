@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css\PlayerStyle.css">
-
-    <title> Profile: Kasanoma FC </title>
+    <title> Ashesi Sports+ </title>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -38,12 +36,12 @@
 
     <div class="profile-top">
         <div class="profile-left">
-            <img src="images/kasanoma.png" alt="" id="profile-img" style="padding-right:90px; width: 50%; heiht:50%" >
+            <img src="images/northside.png" alt="" id="profile-img" style="padding-right:90px; width: 50%; heiht:50%">
 
         </div>
 
         <div class="profile-right">
-            <h1> Kasanoma FC </h1>
+            <h1> Northside FC </h1>
             <hr id="hr">
         </div>
         
@@ -62,54 +60,4 @@
         </div>
 </div>
 </body>
-
-<?php
-//check if user came through profile page since the teamIDs have been inserted on that 
-    if (isset($_GET['teamid'])){
-        echo "Team ID identified: ".$_GET['teamid'];
-        echo "<br>";
-
-        $selectedTeamID = $_GET['teamid'];
-
-        //Setup database connection
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "afa_db";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if($conn -> connect_error){
-            die("Error encountered - ".$conn->connect_error);
-        }
-        else{
-            echo "<h1>Database connection is good to go </h1>";
-            echo "<br>";
-
-            //Select relevant player data (those from this specific team) from the database
-            $sql = "SELECT * from teammember WHERE teamID ='$selectedTeamID'";
-
-            $result = mysqli_query($conn, $sql);
-
-            if($result){
-                // echo "<h3> Result returned valid values</h3>";
-                // echo "<br>";
-                
-                echo "<h1>Player Name  || Player Position</h1>";
-                echo "<content>";
-                
-                while($row = mysqli_fetch_assoc($result)){
-                    echo '<h1>'.$row['fname']. '  ' . $row['lname'].' || '.$row['position']. '<br><h1>';
-
-                }
-                echo "</content>";
-            }
-        }
-    }
-    else{
-        echo "Team ID could not be found";
-        header("Location: profile.php");
-        exit();
-    }
-?>
 </html>
