@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Poppins;
+    src: url(css\Poppins-Regular.ttf);
+}
+
+.content{
+    font-family: 'Poppins', 'sans-serif';
+    color: yellow;
+}
+

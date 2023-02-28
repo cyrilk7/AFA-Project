@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css\PlayerStyle.css">
+
     <title> Profile: Kasanoma FC </title>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
@@ -36,7 +38,7 @@
 
     <div class="profile-top">
         <div class="profile-left">
-            <img src="images/kasanoma.png" alt="" id="profile-img" style="padding-right:90px; width: 50%; heiht:50%" >
+            <img src="KasanomaIcon.jpg" alt="" id="profile-img" style="padding-right:90px; width: 50%; heiht:50%" >
 
         </div>
 
@@ -94,11 +96,13 @@
                 // echo "<br>";
                 
                 echo "<h1>Player Name  || Player Position</h1>";
+                echo "<content>";
                 
                 while($row = mysqli_fetch_assoc($result)){
                     echo '<h1>'.$row['fname']. '  ' . $row['lname'].' || '.$row['position']. '<br><h1>';
 
                 }
+                echo "</content>";
             }
         }
     }
