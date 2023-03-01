@@ -66,8 +66,8 @@
 <?php
 //check if user came through profile page since the teamIDs have been inserted on that 
     if (isset($_GET['teamid'])){
-        echo "Team ID identified: ".$_GET['teamid'];
-        echo "<br>";
+        // echo "Team ID identified: ".$_GET['teamid'];
+        // echo "<br>";
 
         $selectedTeamID = $_GET['teamid'];
 
@@ -83,7 +83,7 @@
             die("Error encountered - ".$conn->connect_error);
         }
         else{
-            echo "<h1>Database connection is good to go </h1>";
+            // echo "<h1>Database connection is good to go </h1>";
             echo "<br>";
 
             //Select relevant player data (those from this specific team) from the database
@@ -101,13 +101,8 @@
                 
                 while($row = mysqli_fetch_assoc($result)){
                     $currPlayerID = $row['playerID'];
-                    echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'
-                    <a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'&delete=true">DELETE</a>'
-                    . ' ' . '<a href = "Update_player_proc.php?playerID= '.$currPlayerID.'&update=true">UPDATE</a>'
-                    . ' ' . '<a href = "Add_player_proc.php?playerID= '.$currPlayerID.'&delete=true">ADD</a>
-
+                    echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'                    
                     <br><h3>';
-                    echo $currPlayerID;
 
 
                 }

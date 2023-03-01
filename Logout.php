@@ -10,8 +10,7 @@
         }
     </style>
     <body>
-    <h2>Welcome to the Add player page</h2>
-    
+    <h2>Welcome to the Logout page</h2>
     </body>
 
 </html>

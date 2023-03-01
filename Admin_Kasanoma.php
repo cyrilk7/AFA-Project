@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css\styles.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css\PlayerStyle.css">
+    <link rel="stylesheet" href="css\AddVideoStyle.css">
 
-    <title> Ashesi Sports+ </title>
+    
+
+    <title> Profile: Kasanoma FC </title>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -24,7 +27,10 @@
                     <li><a href="statistics.php">Statistics</a></li>
                     <li><a href="profile.php">Profile</a></li>  
                     <li><a href="media.php">Media Center</a></li>  
-                    <li><a href="login.php"><button id="login"> Log In </button>   </a></li>
+                    <li><a href = "#"><button id="addUser" 
+                        class="addUser button"> Add Player </button></a></li>
+                    <li><a href="Logout.php"><button id="login"> Log Out </button>   </a></li>
+                    
                     <!-- <li><a href="login.html"><button id="login" data-toggle="modal" data-target="#loginModal"> Log In </button>   </a></li> -->
                     
                                
@@ -34,16 +40,87 @@
             </div>
     </div>
 
+    <!-- Div containing code for the modal that is triggered when Add Player button is clicked -->
+    <div>
+    <script src="addVideos.js"></script>
+        <div id="addUserModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Add New Player</h2>
+            </div>
+    
+            <div class="modal-body">
+              <form
+                name="modalForm"
+                method="POST"
+                action="Add_player_proc.php"
+                class="userFormDiv"
+              >
+                <!-- Form input boxes -->
+                <label class="formLabel"><b> Player First Name </b></label>
+                <br />
+                <input
+                  class="userForm box"
+                  type="text"
+                  placeholder="First name"
+                  name="fname"
+                  id = "fname"
+                  required
+                />
+                <br /><br />
+    
+                <label class="formLabel"><b> Player Last Name </b></label>
+                <br />
+                <input
+                  class="userForm box"
+                  type="text"
+                  placeholder="Enter the last name"
+                  name="lname"
+                  id = "lname"
+                  required
+                />
+                <br /><br />
+    
+                <label class="formLabel"><b> Player Team</b></label> <br />
+                <select
+                  class="userForm box"
+                  name="teamID"
+                  id = "teamID"
+                >
+                <option name = "1" value = "1">Kasanoma</option>
+                <option name = "2" value = "2">Elite</option>
+                <option name = "3" value = "3">Northside</option>
+                <option name = "4" value = "4">Legends</option>
+                <option name = "5" value = "5">Highlanders</option>
+                <option name = "6" value = "6">Red Army</option>
+                </select>
+
+                <br/><br/>
+     
+               
+    
+                <div class="center">
+                  <button name="vidSubmit" type="submit" class="createAccount button" value="vidSubmit">
+                    Add New Player
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
 
 
     <div class="profile-top">
         <div class="profile-left">
-            <img src="images/northside.png" alt="" id="profile-img" style="padding-right:90px; width: 50%; heiht:50%">
+            <img src="images/kasanoma.png" alt="" id="profile-img" style="padding-right:90px; width: 50%; heiht:50%" >
 
         </div>
 
         <div class="profile-right">
-            <h1> Northside FC </h1>
+            <h1> Kasanoma FC </h1>
             <hr id="hr">
         </div>
         
@@ -61,12 +138,16 @@
             <img src="images/team.png" alt="" style="margin-left: 100px; height: 90%;">
         </div>
 </div>
+
+<script src="addVideos.js"></script>
+
 </body>
+
 <?php
 //check if user came through profile page since the teamIDs have been inserted on that 
     if (isset($_GET['teamid'])){
-        // echo "Team ID identified: ".$_GET['teamid'];
-        // echo "<br>";
+        echo "Team ID identified: ".$_GET['teamid'];
+        echo "<br>";
 
         $selectedTeamID = $_GET['teamid'];
 
@@ -82,7 +163,7 @@
             die("Error encountered - ".$conn->connect_error);
         }
         else{
-            // echo "<h1>Database connection is good to go </h1>";
+            echo "<h1>Database connection is good to go </h1>";
             echo "<br>";
 
             //Select relevant player data (those from this specific team) from the database
@@ -100,8 +181,13 @@
                 
                 while($row = mysqli_fetch_assoc($result)){
                     $currPlayerID = $row['playerID'];
-                    echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'                    
+                    echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'
+                    <a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'&delete=true">DELETE</a>'
+                    . ' ' . '<a href = "Update_player_proc.php?playerID= '.$currPlayerID.'&update=true">UPDATE</a>'
+                    . ' ' . '<a href = "Add_player_proc.php?playerID= '.$currPlayerID.'&delete=true">ADD</a>
+
                     <br><h3>';
+                    echo $currPlayerID;
 
 
                 }

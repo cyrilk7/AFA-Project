@@ -66,7 +66,7 @@
 //check if user came through profile page since the teamIDs have been inserted on that 
     if (isset($_GET['teamid'])){
         // echo "Team ID identified: ".$_GET['teamid'];
-        // echo "<br>";
+        echo "<br>";
 
         $selectedTeamID = $_GET['teamid'];
 
@@ -100,8 +100,13 @@
                 
                 while($row = mysqli_fetch_assoc($result)){
                     $currPlayerID = $row['playerID'];
-                    echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'                    
+                    echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'
+                    <a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'&delete=true">DELETE</a>'
+                    . ' ' . '<a href = "Update_player_proc.php?playerID= '.$currPlayerID.'&update=true">UPDATE</a>'
+                    . ' ' . '<a href = "Add_player_proc.php?playerID= '.$currPlayerID.'&delete=true">ADD</a>
+
                     <br><h3>';
+                    // echo $currPlayerID;
 
 
                 }
