@@ -95,14 +95,28 @@
                 // echo "<h3> Result returned valid values</h3>";
                 // echo "<br>";
                 
-                echo "<h1>Player Name  || Player Position</h1>";
                 echo "<content>";
+                echo "<h1>Player Name  || Player Position</h1>";
+
                 
                 while($row = mysqli_fetch_assoc($result)){
-                    echo '<h1>'.$row['fname']. '  ' . $row['lname'].' || '.$row['position']. '<br><h1>';
+                    $currPlayerID = $row['playerID'];
+                    echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'
+                    <a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'&delete=true">DELETE</a>'
+                    . ' ' . '<a href = "Update_player_proc.php?playerID= '.$currPlayerID.'&update=true">UPDATE</a>'
+                    . ' ' . '<a href = "Add_player_proc.php?playerID= '.$currPlayerID.'&delete=true">ADD</a>
+
+                    <br><h3>';
+                    echo $currPlayerID;
+
 
                 }
+                //<a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'">DELETE</a>
                 echo "</content>";
+
+            //    echo" <script type = "text/javascript">
+            //     </script>
+            //     "
             }
         }
     }

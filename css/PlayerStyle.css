@@ -3,8 +3,17 @@
     src: url(css\Poppins-Regular.ttf);
 }
 
-.content{
+/* Container for player info section */
+content{
     font-family: 'Poppins', 'sans-serif';
+}
+
+content h3 {
+    color: blue;
+}
+
+content h3 {
     color: yellow;
 }
+
 
