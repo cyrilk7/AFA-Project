@@ -107,7 +107,7 @@
         <h1> Team Profiles </h1>
         <div class="profile-row" style = "display:flex;">
             <div class="profile-box" >
-            <a href="Admin_Kasanoma.php?teamid=1">
+            <a href="Admin_Kasanoma.php?teamid=3">
                 <div class="profile-img">
                     <img src="images/kasanoma.png" alt="" >
                 </div>
@@ -125,7 +125,7 @@
             </div>
 
             <div class="profile-box" >
-            <a href="Admin_Northside.php?teamid=3">
+            <a href="Admin_Northside.php?teamid=6">
                 <div class="profile-img">
                     <img src="images/northside.png" alt="" >
                 </div>
@@ -136,7 +136,7 @@
 
         <div class="profile-row" style = "display:flex;">
             <div class="profile-box">
-            <a href="Admin_Legends.php?teamid=4">
+            <a href="Admin_Legends.php?teamid=5">
                 <div class="profile-img">
                     <img src="images/kasanoma.png" alt="">
                 </div>
@@ -145,7 +145,7 @@
             </div>
 
             <div class="profile-box" >
-            <a href="Admin_RedArmy.php?teamid=5">
+            <a href="Admin_RedArmy.php?teamid=4">
                 <div class="profile-img">
                     <img src="images\high.jpg" alt="" >
                 </div>
@@ -154,7 +154,7 @@
             </div>
 
             <div class="profile-box" >
-            <a href="redArmy.php">
+            <a href="Admin_RedArmy.php?teamid=7">
                 <div class="profile-img">
                     <img src="images\red.jpg" alt="" >
                 </div>
