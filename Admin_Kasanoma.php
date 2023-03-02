@@ -81,22 +81,28 @@
                   required
                 />
                 <br /><br />
-    
-                <label class="formLabel"><b> Player Team</b></label> <br />
-                <select
+                <label class="formLabel"><b> Player Position</b></label>
+                <br />
+                <input
                   class="userForm box"
+                  type="text"
+                  placeholder="Eg. CB, RB or CF"
+                  name="position"
+                  id = "position"
+                  required
+                />
+    
+                <input
+                  class="userForm box"
+                  type="text"
+                  placeholder="Enter the last name"
                   name="teamID"
                   id = "teamID"
-                >
-                <option name = "1" value = "1">Kasanoma</option>
-                <option name = "2" value = "2">Elite</option>
-                <option name = "3" value = "3">Northside</option>
-                <option name = "4" value = "4">Legends</option>
-                <option name = "5" value = "5">Highlanders</option>
-                <option name = "6" value = "6">Red Army</option>
-                </select>
-
-                <br/><br/>
+                  value = "1"
+                  hidden
+                  required
+                />
+                
      
                
     
@@ -163,8 +169,8 @@
             die("Error encountered - ".$conn->connect_error);
         }
         else{
-            echo "<h1>Database connection is good to go </h1>";
-            echo "<br>";
+            // echo "<h1>Database connection is good to go </h1>";
+            // echo "<br>";
 
             //Select relevant player data (those from this specific team) from the database
             $sql = "SELECT * from teammember WHERE teamID ='$selectedTeamID'";
@@ -183,8 +189,7 @@
                     $currPlayerID = $row['playerID'];
                     echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'
                     <a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'&delete=true">DELETE</a>'
-                    . ' ' . '<a href = "Update_player_proc.php?playerID= '.$currPlayerID.'&update=true">UPDATE</a>'
-                    . ' ' . '<a href = "Add_player_proc.php?playerID= '.$currPlayerID.'&delete=true">ADD</a>
+                    . ' ' . '<a href = "Update_player_proc.php?playerID= '.$currPlayerID.'&update=true">UPDATE</a>
 
                     <br><h3>';
                     echo $currPlayerID;
