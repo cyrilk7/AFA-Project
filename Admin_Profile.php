@@ -38,7 +38,7 @@
             </div>
     </div>
 
-    <div id="addUserModal" class="modal">
+    <!-- <div id="addUserModal" class="modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="close">&times;</span>
@@ -51,9 +51,9 @@
                 method="POST"
                 action="addVideo_proc.php"
                 class="userFormDiv"
-              >
+              > -->
                 <!-- Form input boxes -->
-                <label class="formLabel"><b> Video Title </b></label>
+                <!-- <label class="formLabel"><b> Video Title </b></label>
                 <br />
                 <input
                   class="userForm box"
@@ -98,7 +98,7 @@
           </div>
         </div>
     
-      
+       -->
     
       
 

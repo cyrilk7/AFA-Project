@@ -69,8 +69,8 @@
                         echo "<br>";
                         echo $playerFirstName." successfully added to db";
 
-                       
-                        
+                        header("Location: Admin_Kasanoma.php?teamid=1");
+                        exit();
         
                     //    echo" <script type = "text/javascript">
                     //     </script>
@@ -83,7 +83,7 @@
      }
     //  Write db query to return name of team in order to create correct redirect
      echo "<a href = 'Admin_Kasanoma.php?teamid=1'><button> Click to return to profile page</button></a>";
-
+    
 
      ?>
     </body>

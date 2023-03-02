@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +8,24 @@
     <link rel="stylesheet" href="css\styles.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css\PlayerStyle.css">
-    <link rel="stylesheet" href="css\AddVideoStyle.css">
+    <link rel="stylesheet" href="AddVideoStyle.css">
 
     
 
     <title> Profile: Kasanoma FC </title>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
+
+<?php
+if (isset($_GET['teamid'])){
+}
+  else{
+    echo "Team ID could not be found";
+    header("Location: profile.php");
+    exit();
+}
+
+?>
 <body>
     
     <div class="navbar-local">
@@ -27,9 +39,11 @@
                     <li><a href="statistics.php">Statistics</a></li>
                     <li><a href="profile.php">Profile</a></li>  
                     <li><a href="media.php">Media Center</a></li>  
+                    <li><a href="#"><button id="login"> Edit Profile </button>   </a></li>
                     <li><a href = "#"><button id="addUser" 
                         class="addUser button"> Add Player </button></a></li>
                     <li><a href="Logout.php"><button id="login"> Log Out </button>   </a></li>
+
                     
                     <!-- <li><a href="login.html"><button id="login" data-toggle="modal" data-target="#loginModal"> Log In </button>   </a></li> -->
                     
@@ -86,16 +100,16 @@
                 <input
                   class="userForm box"
                   type="text"
-                  placeholder="Eg. CB, RB or CF"
+                  placeholder="Eg. CB, RB or CF"   
                   name="position"
                   id = "position"
                   required
                 />
     
+                <!-- Hidden input box that will submit the teamID along with the rest of the given information -->
                 <input
                   class="userForm box"
                   type="text"
-                  placeholder="Enter the last name"
                   name="teamID"
                   id = "teamID"
                   value = "1"
@@ -133,11 +147,11 @@
     </div>
     <div style="display:flex">
         <div class="profile-bottom">
-            <p> Founded: <span> 2015 </span> </p>
-            <p> Head Coach:  <span>Kofi Osei Owusi </span> </p>
-            <p> Assistant Coach: <span> John Brends </span> </p>
-            <p> Captain: <span> Jordan Boye</span>  </p>
-            <p> Number Of Trophies: <span> 3 </span> </p>
+            <p> Founded: <span id = "Founded-Tag"> 2015 </span> </p>
+            <p> Head Coach:  <span id = "HeadCoach-Tag">Kofi Osei Owusi </span> </p>
+            <p> Assistant Coach: <span id = "AssistantCoach-Tag"> John Brends </span> </p>
+            <p> Captain: <span id = "Captain-Tag"> Jordan Boye</span>  </p>
+            <p> Number Of Trophies: <span id = "Trophies-Tag"> 3 </span> </p>
 
         </div>
         <div>
@@ -152,6 +166,8 @@
 <?php
 //check if user came through profile page since the teamIDs have been inserted on that 
     if (isset($_GET['teamid'])){
+        echo "Team ID identified: ".$_GET['teamid'];
+        echo "<br>";if (isset($_GET['teamid'])){
         echo "Team ID identified: ".$_GET['teamid'];
         echo "<br>";
 
@@ -188,20 +204,20 @@
                 while($row = mysqli_fetch_assoc($result)){
                     $currPlayerID = $row['playerID'];
                     echo '<h3>'.$row['fname'].'  '. $row['lname'].' || '.$row['position'].'
-                    <a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'&delete=true">DELETE</a>'
-                    . ' ' . '<a href = "Update_player_proc.php?playerID= '.$currPlayerID.'&update=true">UPDATE</a>
+                    <a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'&delete=true">
+                    <button id = deletePlayer>Delete</button></a>'
+                    . ' ' . '<a href = "Update_player_proc.php?playerID= '.$currPlayerID.'&update=true">
+                    <button id="updatePlayer" class="updatePlayer button">Update</button></a>
 
                     <br><h3>';
-                    echo $currPlayerID;
+                    
+                    // echo "<span id = Test>".$currPlayerID."</span>";
 
 
                 }
-                //<a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'">DELETE</a>
                 echo "</content>";
 
-            //    echo" <script type = "text/javascript">
-            //     </script>
-            //     "
+               
             }
         }
     }
@@ -210,5 +226,9 @@
         header("Location: profile.php");
         exit();
     }
+    }
+
+   
+  
 ?>
 </html>
