@@ -9,7 +9,6 @@ html, body{
     overflow-x: hidden;
 }
 
-
 body{
     background-image: url("../images/bg.png");
     background-size: cover;
@@ -51,7 +50,7 @@ padding-bottom: 20px;
     display: flex;
 }
 .navbar-local ul li{
-    margin-left: 40px;
+    margin-left:2rem;
 }
 
 .logo-local{
@@ -61,7 +60,7 @@ padding-bottom: 20px;
 
 .logobox-local{
     margin-left: 7%;
-    margin-right: 7%;
+    /* margin-right: 7%; */
 
 }
 
@@ -114,11 +113,13 @@ p{
     margin-top: 0px; */
     
 }
-
+.content-box-local h1{
+    font-size: 56px;
+}
 h1{
     font-style: normal;
     font-weight: 700;
-    font-size: 56px;
+    font-size: 42px;
     line-height: 80px;
     color: whitesmoke;
 }
@@ -438,7 +439,11 @@ label .p-white{
         font-size: 10px;
         
     }
-    
 
 
+
+}
+
+#players{
+    color: white;
 }

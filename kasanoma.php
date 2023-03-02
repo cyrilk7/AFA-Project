@@ -53,6 +53,7 @@
             <p> Assistant Coach: <span> John Brends </span> </p>
             <p> Captain: <span> Jordan Boye</span>  </p>
             <p> Number Of Trophies: <span> 3 </span> </p>
+            <p id="players"> Players </p>
 
         </div>
         <div>

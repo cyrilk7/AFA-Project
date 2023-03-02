@@ -57,6 +57,23 @@
 
 @media only screen and (max-width: 600px){
   .stat-container{
-    padding:49px !important;
+    padding-left:49px !important;
+    
+  }
+
+  .stat-container h1{
+    margin-bottom: 0;
+  }
+
+  .stat-row{
+    /* display: block !important; */
+     /* flex-wrap: wrap; */
+     flex-direction: column;
+  }
+
+  .stat-box{
+    width: 100% !important;
+    margin: auto;
+    margin-top: 80px;
   }
 }

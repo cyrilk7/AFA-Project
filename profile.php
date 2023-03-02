@@ -49,7 +49,7 @@
             <div class="profile-box" >
             <a href="elite.php">
                 <div class="profile-img">
-                    <img src="images/Elite.png" alt="" >
+                    <img src="images/elite.png" alt="" >
                 </div>
                 <h2 style = "color:white;"> Elite FC</h2>
             </a>
