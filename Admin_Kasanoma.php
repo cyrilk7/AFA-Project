@@ -34,11 +34,11 @@ if (isset($_GET['teamid'])){
                     <img class="logo-local" src="images/Group 1.svg" alt="logo">
                 </div>
                 <ul class="links-local">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="adminindex.php">Home</a></li>
                     <li><a href="standings.php">League Tables</a></li>
                     <li><a href="statistics.php">Statistics</a></li>
-                    <li><a href="profile.php">Profile</a></li>  
-                    <li><a href="media.php">Media Center</a></li>  
+                    <li><a href="Admin_Profile.php">Profile</a></li>  
+                    <li><a href="AdminMediaCenter.php">Media Center</a></li>  
                     <li><a href="#"><button id="login"> Edit Profile </button>   </a></li>
                     <li><a href = "#"><button id="addUser" 
                         class="addUser button"> Add Player </button></a></li>
@@ -166,10 +166,11 @@ if (isset($_GET['teamid'])){
 <?php
 //check if user came through profile page since the teamIDs have been inserted on that 
     if (isset($_GET['teamid'])){
-        echo "Team ID identified: ".$_GET['teamid'];
-        echo "<br>";if (isset($_GET['teamid'])){
-        echo "Team ID identified: ".$_GET['teamid'];
-        echo "<br>";
+        // echo "Team ID identified: ".$_GET['teamid'];
+        // echo "<br>";
+        if (isset($_GET['teamid'])){
+        // echo "Team ID identified: ".$_GET['teamid'];
+        // echo "<br>";
 
         $selectedTeamID = $_GET['teamid'];
 
