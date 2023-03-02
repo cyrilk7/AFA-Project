@@ -64,29 +64,39 @@
 
             //Redirect back
             //Write if block to send user back to appropriate team page 
-            if($originalTeamID === '1'){
-                header("Location: Admin_Kasanoma.php?teamid=1");
-                exit();
-            }
             if($originalTeamID === '2'){
                 header("Location: Admin_Elite.php?teamid=2");
                 exit();
             }
+
             if($originalTeamID === '3'){
-                header("Location: Admin_Northside.php?teamid=3");
+                header("Location: Admin_Kasanoma.php?teamid=3");
                 exit();
             }
+            
             if($originalTeamID === '4'){
-                header("Location: Admin_Legends.php?teamid=4");
+                header("Location: Admin_Highlanders.php?teamid=4");
                 exit();
             }
+
             if($originalTeamID === '5'){
-                header("Location: Admin_Highlanders.php?teamid=5");
+                header("Location: Admin_Legends.php?teamid=5");
                 exit();
             }
+
             if($originalTeamID === '6'){
-                header("Location: Admin_RedArmy.php?teamid=6");
+                header("Location: Admin_Northside.php?teamid=6");
                 exit();
+            }
+            
+            
+            if($originalTeamID === '7'){
+                header("Location: Admin_RedArmy.php?teamid=7");
+                exit();
+            }
+
+            else{
+                echo $originalTeamID;
             }
             
             

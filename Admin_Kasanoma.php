@@ -112,7 +112,7 @@ if (isset($_GET['teamid'])){
                   type="text"
                   name="teamID"
                   id = "teamID"
-                  value = "1"
+                  value = "3"
                   hidden
                   required
                 />

@@ -66,11 +66,41 @@
                         // echo "<h3> Result returned valid values</h3>";
                         // echo "<br>";
                         
-                        echo "<br>";
-                        echo $playerFirstName." successfully added to db";
+                        // echo "<br>";
+                        // echo $playerFirstName." successfully added to db";
 
-                        header("Location: Admin_Kasanoma.php?teamid=1");
-                        exit();
+                        if($playerTeamID === '2'){
+                            header("Location: Admin_Elite.php?teamid=2");
+                            exit();
+                        }
+
+                        if($playerTeamID === '3'){
+                            header("Location: Admin_Kasanoma.php?teamid=3");
+                            exit();
+                        }
+                        
+                        if($playerTeamID === '4'){
+                            header("Location: Admin_Highlanders.php?teamid=4");
+                            exit();
+                        }
+
+                        if($playerTeamID === '5'){
+                            header("Location: Admin_Legends.php?teamid=5");
+                            exit();
+                        }
+
+                        if($playerTeamID === '6'){
+                            header("Location: Admin_Northside.php?teamid=6");
+                            exit();
+                        }
+                        
+                        
+                        if($playerTeamID === '7'){
+                            header("Location: Admin_RedArmy.php?teamid=7");
+                            exit();
+                        }
+                        
+                       
         
                     //    echo" <script type = "text/javascript">
                     //     </script>
