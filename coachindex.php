@@ -1,60 +1,60 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="trial/main.css">
-    <link rel="stylesheet" href="css/styles.css">
     <!-- link icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- link swiper.min.css -->
     <link rel="stylesheet" href="trial/swiper-bundle.min.css">
 
-    <title> Ashesi Sports+ </title>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 <body>
-  <style>
-        .box-1 img{
-        width: 180px;
-        height: 170px;
-    }
-  </style>
-    
-    <div class="header">
-    <div class="lowerSection">
-            <div class="logoDiv" style="color: white; font-size: 25px">
-                <i class="uil uil-football icon" style="font-size: 25px"></i>
-                SPORTS+
+
+
+        <div class="header">
+
+            <div class="lowerSection">
+                
+                <div class="logoDiv" style="color: white; font-size: 25px">
+                    <i class="uil uil-football icon" style="font-size: 25px"></i>
+                    SPORTS+
+                </div>
+                
+                <div class="navBar">
+                    <ul class="navList">
+                        <li class="navItem"><a href="coachindex.php" class="navLink">Home</a></li>
+                        <li class="navItem"><a href="standings.php" class="navLink">LeagueTable</a></li>
+                        <li class="navItem"><a href="statistics.php" class="navLink">Statistics</a></li>
+                        <li class="navItem"><a href="profile-admin.php" class="navLink">Profiles</a></li> <!-- add charts so they see team performance -->
+                        <li class="navItem"><a href="media.php" class="navLink">Media Center</a></li>
+                      </ul>
+                      <div class="button">
+                          <a href="logout.php">LOG OUT</a>
+                      </div>
+                      <small>*Only club representatives.</small>
+                </div>
+                <div class="navBarBtn">
+                    <i class="uil uil-bars icon"></i>
+                </div>
             </div>
+    
+        </div>
         
-        <div class="navBar">
-            <ul class="navList">
-                <li class="navItem"><a href="adminindex.php" class="navLink">Home</a></li>
-                <li class="navItem"><a href="standings.php" class="navLink">LeagueTable</a></li>
-                <li class="navItem"><a href="statistics.php" class="navLink">Statistics</a></li>
-                <li class="navItem"><a href="profile-admin.php" class="navLink">Profiles</a></li> <!-- add charts so they see team performance -->
-                <li class="navItem"><a href="fixture.php" class="navLink">Fixtures</a></li> 
-                <li class="navItem"><a href="addUser.php" class="navLink">Users</a></li> 
-                <li class="navItem"><a href="media-admin.php" class="navLink">MediaCenter</a></li>
-              </ul>
-              <div class="button">
-                  <a href="logout.php">LOG OUT</a>
-              </div>
-              <small>*Only club representatives.</small>
-        </div>
-        <div class="navBarBtn">
-            <i class="uil uil-bars icon"></i>
-        </div>
-    </div>
-
-    </div>
-
-
-    <div class="content-box-local">
+         <div class="aboutBanner" style="padding: 90px 0 10px;">
+            <span class="bannerText">
+                <i class="uil uil-constructor icon"></i>
+                <p>Sports+</p>
+            </span>
+         </div>
+    
+         
+         <div class="content-box-local">
         <p> Sports Management Web Application </p>
         <h1> The New Era of the AFA </h1>
         <p class="p-white"> We bring you everything you need, all in one place. </p>
@@ -72,10 +72,6 @@
             <h2 style="margin-top:0px;"> Saturday 10:00 AM </h2>
           </div>
           <img src="images/northside.png" alt="" style="margin:auto">
-
-
-            
-
         </div>
 
 
@@ -137,8 +133,42 @@
     </div>
 
 
+       <!-- footer section starts here =============================================================-->
+    <div class="footer">
+        <div class="copyRight">
+            <div class="copyRightDiv">
+                <span class="middle"><a href="results.html" style="color: gray;">Table</a></span>
+                <span class="middle"><a href="news.html" style="color: gray;">Transfers</a> </span>
+                <span></span>
+                <span class="middle" style="color: white;">Contact Us:
+                    <a href="https://www.instagram.com/ashesi_football" target="_blank" style="color: white;"> <!-- Switch to instagram -->
+                        <i class="uil uil-instagram icon"></i>
+                    </a>
+                    <a href="mailto:afa@ashesi.edu.gh" target="_blank" style="color: white;">
+                        <i class="uil uil-envelope-heart icon"></i>
+                    </a>
+                    <a href="https://www.twitter.com/AshesiFootball" target="_blank" style="color: white;"> <!-- Switch to twitter -->
+                        <i class="uil uil-twitter icon"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" style="color: white;">
+                        <i class="uil uil-youtube icon"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
 
+    <!-- footer section ends here =============================================================-->
 
+    <!-- swiper.js link -->
+    <script src="trial/swiper-bundle.min.js"></script>
+    <!-- link javascript -->
+    <script src="trial/main.js"></script>
      <script src="./bootstrap/js/bootstrap.js"></script>
+
+    <!-- swiper.js link -->
+    <script src="trial/swiper-bundle.min.js"></script>
+    <!-- link javascript -->
+    <script src="trial/main.js"></script>
 </body>
 </html>

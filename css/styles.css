@@ -91,6 +91,17 @@ h3{
     color: whitesmoke;
 }
 
+.players{
+    width: 112px;
+    height: 52px;
+    background: linear-gradient(132.37deg, #FF0F00 21.59%, #B45C57 104.34%);
+    border-radius: 6px;
+    margin-left: 119px;
+    font-family: 'Poppins';
+    color: whitesmoke;
+
+}
+
 p{
     color: #D23B32;
     font-weight: 600;
@@ -121,7 +132,7 @@ h1{
     font-weight: 700;
     font-size: 42px;
     line-height: 80px;
-    color: whitesmoke;
+    color: whitesmoke !important;
 }
 
 .p-white{
@@ -318,7 +329,7 @@ label .p-white{
 }
 
 .modal-content{
-    background: #D9D9D9!important;
+    background: white!important;
 }
 
 #profile-img{
@@ -444,6 +455,15 @@ label .p-white{
 
 }
 
-#players{
-    color: white;
+.player-modal{
+    display:flex; 
+}
+
+.edit-icon{
+    /* padding-top:22px; */
+    padding: 22px 8px;
+}
+
+.icons{
+    margin-left: 20px;
 }

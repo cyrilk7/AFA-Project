@@ -5,34 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="trial/main.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title> Standings </title>
+    <style>
+        #league-table2 {
+            font-family: Poppins;
+            font-weight: 600;
+            font-size: 23px;
+            background: #260307;
+            /* border-collapse: collapse; */
+            border-spacing: 0 30px;
+            width: 100%;
+            color:white;
+            border-left-width: thick;
+        }
+        
+        #league-table2 td {
+            /* border: 1px solid white; */
+            padding: 8px;
+            background: #6E0D18;
+        }
+        
+        #league
+        /* #league-table2 tr:nth-child(even){background-color: #D1D9D3;}
+        #league-table2 tr:nth-child(odd){background-color: white;} */
+        
+        #league-table2 tr:hover {background-color: #ddd;}
+        
+        #league-table2 th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color:#260307;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar-local">
-        <div class="container-local">
-            <div class= logobox-local>
-                <img class="logo-local" src="images/Group 1.svg" alt="logo">
-            </div>
-            <ul class="links-local">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="standings.php">League Tables</a></li>
-                <li><a href="statistics.php">Statistics</a></li>
-                <li><a href="profile.php">Profile</a></li>  
-                <li><a href="media.php">Media Center</a></li>  
-                <li><a href="login.php"><button id="login"> Log In </button>   </a></li>
-                <i class="fas fa-bars fa-2x" id="bar"></i>
-                <!-- <li><a href="login.html"><button id="login" data-toggle="modal" data-target="#loginModal"> Log In </button>   </a></li> -->
-                
-                           
-            </ul>
+<div class="header">
+
+<div class="lowerSection">
     
-    
-        </div>
+    <div class="logoDiv" style="color: white; font-size: 25px">
+        <i class="uil uil-football icon" style="font-size: 25px"></i>
+        SPORTS+
     </div>
+    
+    <div class="navBar">
+        <ul class="navList">
+            <li class="navItem"><a href="index.php" class="navLink">Home</a></li>
+            <li class="navItem"><a href="standings.php" class="navLink">LeagueTable</a></li>
+            <li class="navItem"><a href="statistics.php" class="navLink">Statistics</a></li>
+            <li class="navItem"><a href="profile.php" class="navLink">Profiles</a></li> <!-- add charts so they see team performance -->
+            <li class="navItem"><a href="media.php" class="navLink">Media Center</a></li>
+          </ul>
+          <div class="button">
+              <a href="login.php">LOG IN</a>
+          </div>
+          <small>*Only club representatives.</small>
+    </div>
+    <div class="navBarBtn">
+        <i class="uil uil-bars icon"></i>
+    </div>
+</div>
+
+</div>
     <div id="standings">
-        <h1> League Table </h1>
-        <table id="league-table">
+        <h1 style="color: white;"> League Table </h1>
+        <table id="league-table2">
             <tr>
+                <th> # </th>
                 <th> Rank </th>
                 <th> MP </th>
                 <th>W</th>
@@ -44,81 +87,114 @@
                 <th> PTS </th>
             </tr>
             <tr>
-                <td> Elite </td>
-                <!-- MP -->
-                <td> 23 </td>
-                <!-- Wins -->
-                <td> 7 </td>
-                <!-- Draws -->
-                <td> 2 </td>
-                <!-- Losses -->
                 <td> 1 </td>
-                <!-- Goals For -->
-                <td> 5 </td>
-                <!-- Goals for -->
-                <td> 6 </td>
-                <!-- Goals against -->
-                <td> 3 </td>
-                <!-- Goal difference -->
-                <td> -6 </td>
+                <td> Elite FC </td>
+                <td>2</td>                      
+                <td>2</td>               
+                <td>0</td>           
+                <td>0</td>              
+                <td>4</td>          
+                <td>1</td>              
+                <td>3</td>   
+                <td>2</td>         
             </tr>
             <tr>
-                <td> Kasanoma </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-            </tr>
-            <tr>
-                <td> Northside </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-            </tr>
-            <tr>
+                <td> 2 </td>
                 <td> Red Army </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
+                <td>2</td>                      
+                <td>1</td>               
+                <td>0</td>           
+                <td>1</td>              
+                <td>6</td>          
+                <td>1</td>              
+                <td>5</td>      
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td> 3 </td>
+                <td> Northside FC </td>
+                <td>2</td>                      
+                <td>1</td>               
+                <td>0</td>           
+                <td>1</td>              
+                <td>6</td>          
+                <td>1</td>              
+                <td>5</td>                  
+                <td>1</td>   
             </tr>
             <tr>
-                <td> Legends United </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
+                <td> 4 </td>
+                <td> Highlanders FC </td>
+                <td>2</td>                      
+                <td>1</td>               
+                <td>0</td>           
+                <td>1</td>              
+                <td>1</td>          
+                <td>3</td>              
+                <td>-2</td>               
+                <td>1</td>  
             </tr>
             <tr>
-                <td> Highlanders </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
-                <td> 0 </td>
+                <td> 5 </td>
+                <td> Legends FC </td>
+                <td>1</td>                      
+                <td>1</td>                      
+                <td>0</td>               
+                <td>0</td>           
+                <td>1</td>              
+                <td>0</td>                      
+                <td>-2</td>
+                <td>0</td>  
+            </tr>
+            <tr>
+                <td> 6 </td>
+                <td> Kasanoma FC </td>
+                <td>1</td>                      
+                <td>0</td>               
+                <td>0</td>           
+                <td>1</td>              
+                <td>1</td>          
+                <td>4</td>              
+                <td>-3</td>     
                 <td> 0 </td>
             </tr>
         </table>
     </div>
+
+       <!-- footer section starts here =============================================================-->
+       <div class="footer">
+        <div class="copyRight">
+            <div class="copyRightDiv">
+                <span class="middle"><a href="results.html" style="color: gray;">Table</a></span>
+                <span class="middle"><a href="news.html" style="color: gray;">Transfers</a> </span>
+                <span></span>
+                <span class="middle" style="color: white;">Contact Us:
+                    <a href="https://www.instagram.com/ashesi_football" target="_blank" style="color: white;"> <!-- Switch to instagram -->
+                        <i class="uil uil-instagram icon"></i>
+                    </a>
+                    <a href="mailto:afa@ashesi.edu.gh" target="_blank" style="color: white;">
+                        <i class="uil uil-envelope-heart icon"></i>
+                    </a>
+                    <a href="https://www.twitter.com/AshesiFootball" target="_blank" style="color: white;"> <!-- Switch to twitter -->
+                        <i class="uil uil-twitter icon"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" style="color: white;">
+                        <i class="uil uil-youtube icon"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section ends here =============================================================-->
+
+    <!-- swiper.js link -->
+    <script src="trial/swiper-bundle.min.js"></script>
+    <!-- link javascript -->
+    <script src="trial/main.js"></script>
+     <script src="./bootstrap/js/bootstrap.js"></script>
+     
     
 </body>
 </html>

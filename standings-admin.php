@@ -47,12 +47,12 @@
                 <img class="logo-local" src="images/Group 1.svg" alt="logo">
             </div>
             <ul class="links-local">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="standings.php">League Tables</a></li>
-                <li><a href="statistics.php">Statistics</a></li>
-                <li><a href="profile.php">Profile</a></li>  
-                <li><a href="media.php">Media Center</a></li>  
-                <li><a href="login.php"><button id="login"> Log In </button>   </a></li>
+            <li><a href="adminindex.php">Home</a></li>
+                <li><a href="standings-admin.php">League Tables</a></li>
+                <li><a href="statistics-admin.php">Statistics</a></li>
+                <li><a href="profile-admin.php">Profile</a></li>  
+                <li><a href="media-admin.php">Media Center</a></li>  
+                <li><a href="login.php"><button id="login"> Log out </button>   </a></li>
                 <i class="fas fa-bars fa-2x" id="bar"></i>
                 <!-- <li><a href="login.html"><button id="login" data-toggle="modal" data-target="#loginModal"> Log In </button>   </a></li> -->
                 
