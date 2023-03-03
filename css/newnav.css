@@ -1,0 +1,2765 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap");
+* {
+  /* padding: 0;
+  margin: 0; */
+  font-family: 'Montserrat', sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primaryColor:  rgba(128, 0, 0, 0.808);
+  --secondaryColor: #ca9284;
+  --thirdColor: #ca4e28;
+  --hoverColor: #ca9284;
+  --bgColor: #c97e7e;
+  --whiteColor: #ffffff;
+  --greyTexts: #807a82;
+  --blackColor:#160331;
+  --greyColor: rgb(241, 241, 241);
+  --borderRadius: 3px;
+  --linearGradient: linear-gradient(to right, #963bfe,#fe2882);
+  --fontSize_13px: 13px;
+  --boxShadow: 0px 2px 2px var(--greyColor);
+}
+
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/bg.png");
+}
+
+::html {
+  font-size: 80%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1, h2 {
+  color: var(--primaryColor);
+}
+
+span {
+  font-size: var(--fontSize_13px);
+}
+
+li {
+  list-style: none;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section {
+  padding: 2rem 0 2rem;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.opacity {
+  opacity: .5;
+}
+
+p {
+  font-size: 90%;
+}
+
+.btn {
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.button {
+  padding: 10px 20px;
+  background: var(--greyColor);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 1rem auto;
+  border-radius: var(--borderRadius);
+  border: 2px solid transparent;
+}
+
+.button a {
+  font-size: var(--fontSize_13px);
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+
+.sectionIntro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.subTitle {
+  font-size: 15px;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+}
+
+.teamLogo {
+  width: 40px;
+  height: auto;
+}
+
+.detailsLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 1.5rem;
+}
+
+.detailsLink a {
+  font-size: var(--fontSize_13px);
+  font-weight: 600;
+}
+
+.detailsLink a .icon {
+  color: var(--secondaryColor);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.detailsLink a:hover {
+  color: var(--secondaryColor);
+}
+
+.detailsLink a:hover .icon {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.sectionHeader {
+  padding: 10px 0;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  margin-bottom: 1rem;
+}
+
+.sectionHeader .newsTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.header {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  z-index: 1000;
+  top: 0;
+}
+
+.header .topSection {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: .8rem;
+          column-gap: .8rem;
+  padding: .5rem 0;
+  z-index: 1000;
+}
+
+.header .topSection img {
+  width: 40px;
+  height: auto;
+}
+
+.header .lowerSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: var(--primaryColor);
+  padding: 10px 1rem;
+  z-index: 1000;
+}
+
+.header .lowerSection .logo {
+  width: 90px;
+  height: auto;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.header .lowerSection .logInBtn a {
+  color: var(--whiteColor);
+  font-weight: 500;
+  font-size: var(--fontSize_13px);
+}
+
+.header .lowerSection .navBarBtn .icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--whiteColor);
+}
+
+.header .lowerSection .navBarBtn .icon:hover {
+  color: var(--secondaryColor);
+}
+
+@media screen and (max-width: 768px) {
+  .header .lowerSection .navBar {
+    position: absolute;
+    width: 80%;
+    /* background: var(--greyColor); */
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem 0;
+    left: 50%;
+    right: 50%;
+    top: -20rem;
+    border-radius: 3px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 100;
+    -webkit-box-shadow: 0 2px 8px var(--greyTexts);
+            box-shadow: 0 2px 8px var(--greyTexts);
+  }
+  .header .lowerSection .navBar .navList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .header .lowerSection .navBar .navList .navItem {
+    padding: .5rem;
+    width: 100%;
+    text-align: center;
+  }
+  .header .lowerSection .navBar .navList .navItem:hover {
+    background: var(--linearGradient);
+  }
+  .header .lowerSection .navBar .navList .navItem:hover .navLink {
+    color: var(--whiteColor);
+    font-weight: 600;
+  }
+  .header .lowerSection .navBar .navList .navItem .navLink {
+    font-weight: 500;
+    color: var(--blackColor);
+  }
+  .header .lowerSection .navBar .button {
+    width: 80%;
+    text-align: center;
+    background: var(--primaryColor);
+  }
+  .header .lowerSection .navBar .button:hover {
+    background: var(--secondaryColor);
+  }
+  .header .lowerSection .navBar .button a {
+    color: var(--whiteColor);
+  }
+  .header .lowerSection .navBar small {
+    color: var(--primaryColor);
+  }
+  .header .lowerSection .show {
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    top: 18rem;
+  }
+}
+
+.bannerSection {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.437)), to(#3b364b)), url(./assets/teamImage3.png);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.437), #3b364b), url(./assets/teamImage3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.bannerSection .title {
+  color: var(--whiteColor);
+  padding: 1rem 0;
+}
+
+.bannerSection .subTitle {
+  color: var(--greyColor);
+}
+
+.aboutSection .textDiv {
+  padding-left: 1rem;
+  border-left: 3px solid var(--primaryColor);
+}
+
+.aboutSection .textDiv h2 {
+  padding-bottom: 1rem;
+}
+
+.aboutSection .textDiv .button {
+  margin-left: 0;
+  background: var(--primaryColor);
+}
+
+.aboutSection .textDiv .button a {
+  color: var(--whiteColor);
+}
+
+.aboutSection .textDiv .button:hover {
+  background: transparent;
+  border: 2px solid var(--hoverColor);
+}
+
+.aboutSection .textDiv .button:hover a {
+  color: var(--primaryColor);
+}
+
+.aboutSection .aboutSectionImageDiv {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.aboutSection .aboutSectionImageDiv:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.aboutSection .aboutSectionImageDiv img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logSection, .fixturesSection, .resultsSection {
+  width: 100%;
+}
+
+.logSection .sectionContainer, .fixturesSection .sectionContainer, .resultsSection .sectionContainer {
+  width: 100%;
+}
+
+.logSection .sectionContainer .sectionContent, .fixturesSection .sectionContainer .sectionContent, .resultsSection .sectionContainer .sectionContent {
+  width: 100%;
+  margin: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: center;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv, .logSection .sectionContainer .sectionContent .resultsDiv, .fixturesSection .sectionContainer .sectionContent .fixtureDiv, .fixturesSection .sectionContainer .sectionContent .resultsDiv, .resultsSection .sectionContainer .sectionContent .fixtureDiv, .resultsSection .sectionContainer .sectionContent .resultsDiv {
+  width: 100%;
+  border-top: 7px solid;
+  border-image-slice: 1;
+  padding-top: 1rem;
+  border-image-source: var(--linearGradient);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  padding-bottom: 1rem;
+  border-radius: var(--borderRadius);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .matchNumber, .logSection .sectionContainer .sectionContent .resultsDiv .matchNumber, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .matchNumber, .fixturesSection .sectionContainer .sectionContent .resultsDiv .matchNumber, .resultsSection .sectionContainer .sectionContent .fixtureDiv .matchNumber, .resultsSection .sectionContainer .sectionContent .resultsDiv .matchNumber {
+  display: block;
+  padding: 10px;
+  font-size: var(--fontSize_13px);
+  font-weight: 600;
+  color: var(--secondaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv small, .logSection .sectionContainer .sectionContent .resultsDiv small, .fixturesSection .sectionContainer .sectionContent .fixtureDiv small, .fixturesSection .sectionContainer .sectionContent .resultsDiv small, .resultsSection .sectionContainer .sectionContent .fixtureDiv small, .resultsSection .sectionContainer .sectionContent .resultsDiv small {
+  opacity: .7;
+  font-size: var(--fontSize_13px);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .date, .logSection .sectionContainer .sectionContent .resultsDiv .date, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .date, .fixturesSection .sectionContainer .sectionContent .resultsDiv .date, .resultsSection .sectionContainer .sectionContent .fixtureDiv .date, .resultsSection .sectionContainer .sectionContent .resultsDiv .date {
+  display: block;
+  padding: 5px 0;
+  background: var(--greyColor);
+  margin: 1rem 0;
+  border-radius: var(--borderRadius);
+  width: 100%;
+  font-weight: 600;
+  font-size: var(--fontSize_13px);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .iconDiv .icon, .logSection .sectionContainer .sectionContent .resultsDiv .iconDiv .icon, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .iconDiv .icon, .fixturesSection .sectionContainer .sectionContent .resultsDiv .iconDiv .icon, .resultsSection .sectionContainer .sectionContent .fixtureDiv .iconDiv .icon, .resultsSection .sectionContainer .sectionContent .resultsDiv .iconDiv .icon {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .allFixtures, .logSection .sectionContainer .sectionContent .fixtureDiv .allResults, .logSection .sectionContainer .sectionContent .resultsDiv .allFixtures, .logSection .sectionContainer .sectionContent .resultsDiv .allResults, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .allFixtures, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .allResults, .fixturesSection .sectionContainer .sectionContent .resultsDiv .allFixtures, .fixturesSection .sectionContainer .sectionContent .resultsDiv .allResults, .resultsSection .sectionContainer .sectionContent .fixtureDiv .allFixtures, .resultsSection .sectionContainer .sectionContent .fixtureDiv .allResults, .resultsSection .sectionContainer .sectionContent .resultsDiv .allFixtures, .resultsSection .sectionContainer .sectionContent .resultsDiv .allResults {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  gap: .5rem;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture:hover .time, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult:hover .time, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture:hover .time, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult:hover .time, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture:hover .time, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult:hover .time, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture:hover .time, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult:hover .time, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture:hover .time, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult:hover .time, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture:hover .time, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult:hover .time {
+  color: var(--whiteColor);
+  background: var(--primaryColor) !important;
+  border-radius: var(--borderRadius);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture:hover .venue, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult:hover .venue, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture:hover .venue, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult:hover .venue, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture:hover .venue, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult:hover .venue, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture:hover .venue, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult:hover .venue, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture:hover .venue, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult:hover .venue, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture:hover .venue, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult:hover .venue {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams {
+  width: 100%;
+  margin: 1rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .name, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .name, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .name, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .name, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .name, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .name, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .name, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .name, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .name, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .name, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .name, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .name {
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv {
+  margin: 0 8px;
+  height: 40px;
+  width: 40px;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv img, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv img, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv img, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv img, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv img, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv img, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv img, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv img, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv img, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv img, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .teamName_teamLogo .teamLogoDiv img, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .teamName_teamLogo .teamLogoDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .time, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .time, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .time, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .time, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .time, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .time, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .time, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .time, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .teams .time, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult .teams .time, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture .teams .time, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult .teams .time {
+  background: var(--greyColor);
+  padding: 5px 9px;
+  border-radius: var(--borderRadius);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .venue, .logSection .sectionContainer .sectionContent .fixtureDiv .singleResult .venue, .logSection .sectionContainer .sectionContent .resultsDiv .singleFixture .venue, .logSection .sectionContainer .sectionContent .resultsDiv .singleResult .venue, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .venue, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .singleResult .venue, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleFixture .venue, .fixturesSection .sectionContainer .sectionContent .resultsDiv .singleResult .venue, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleFixture .venue, .resultsSection .sectionContainer .sectionContent .fixtureDiv .singleResult .venue, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleFixture .venue, .resultsSection .sectionContainer .sectionContent .resultsDiv .singleResult .venue {
+  font-size: var(--fontSize_13px);
+  display: block;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink, .logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink, .resultsSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 1.5rem;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a, .logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a, .resultsSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a {
+  font-size: var(--fontSize_13px);
+  font-weight: 600;
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a .icon, .logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a .icon, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a .icon, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a .icon, .resultsSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a .icon, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a .icon {
+  color: var(--secondaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a:hover, .logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a:hover, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover, .resultsSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a:hover, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover {
+  color: var(--secondaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a:hover .icon, .logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover .icon, .fixturesSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a:hover .icon, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover .icon, .resultsSection .sectionContainer .sectionContent .fixtureDiv .fullFixtureLink a:hover .icon, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover .icon {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv, .fixturesSection .sectionContainer .sectionContent .resultsDiv, .resultsSection .sectionContainer .sectionContent .resultsDiv {
+  border-top: 7px solid;
+  border-image-slice: 1;
+  padding-top: 1rem;
+  border-image-source: var(--linearGradient);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  padding-bottom: 1rem;
+  border-radius: var(--borderRadius);
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .matchNumber, .fixturesSection .sectionContainer .sectionContent .resultsDiv .matchNumber, .resultsSection .sectionContainer .sectionContent .resultsDiv .matchNumber {
+  display: block;
+  padding: 10px;
+  font-size: var(--fontSize_13px);
+  font-weight: 600;
+  color: var(--secondaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv small, .fixturesSection .sectionContainer .sectionContent .resultsDiv small, .resultsSection .sectionContainer .sectionContent .resultsDiv small {
+  opacity: .7;
+  font-size: var(--fontSize_13px);
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .date, .fixturesSection .sectionContainer .sectionContent .resultsDiv .date, .resultsSection .sectionContainer .sectionContent .resultsDiv .date {
+  display: block;
+  padding: 5px 0;
+  background: var(--greyColor);
+  margin: 1rem 0;
+  border-radius: var(--borderRadius);
+  width: 100%;
+  font-weight: 600;
+  font-size: var(--fontSize_13px);
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .teams, .fixturesSection .sectionContainer .sectionContent .resultsDiv .teams, .resultsSection .sectionContainer .sectionContent .resultsDiv .teams {
+  width: 100%;
+  margin: 1rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .name, .fixturesSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .name, .resultsSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .name {
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .teamLogoDiv, .fixturesSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .teamLogoDiv, .resultsSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .teamLogoDiv {
+  margin: 0 8px;
+  height: 40px;
+  width: 40px;
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .teamLogoDiv img, .fixturesSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .teamLogoDiv img, .resultsSection .sectionContainer .sectionContent .resultsDiv .teams .teamName_teamLogo .teamLogoDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .teams .results, .fixturesSection .sectionContainer .sectionContent .resultsDiv .teams .results, .resultsSection .sectionContainer .sectionContent .resultsDiv .teams .results {
+  background: var(--greyColor);
+  padding: 5px 9px;
+  font-weight: 500;
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .venue, .fixturesSection .sectionContainer .sectionContent .resultsDiv .venue, .resultsSection .sectionContainer .sectionContent .resultsDiv .venue {
+  font-size: var(--fontSize_13px);
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 1.5rem;
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a {
+  font-size: var(--fontSize_13px);
+  font-weight: 600;
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a .icon, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a .icon, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a .icon {
+  color: var(--secondaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover {
+  color: var(--secondaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover .icon, .fixturesSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover .icon, .resultsSection .sectionContainer .sectionContent .resultsDiv .fullFixtureLink a:hover .icon {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv, .fixturesSection .sectionContainer .sectionContent .tableDiv, .resultsSection .sectionContainer .sectionContent .tableDiv {
+  padding-bottom: 1rem;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .tableLogoDiv, .fixturesSection .sectionContainer .sectionContent .tableDiv .tableLogoDiv, .resultsSection .sectionContainer .sectionContent .tableDiv .tableLogoDiv {
+  padding: 1rem 0;
+  background: var(--primaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .tableLogoDiv .logo, .fixturesSection .sectionContainer .sectionContent .tableDiv .tableLogoDiv .logo, .resultsSection .sectionContainer .sectionContent .tableDiv .tableLogoDiv .logo {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table table, .fixturesSection .sectionContainer .sectionContent .tableDiv .table table, .resultsSection .sectionContainer .sectionContent .tableDiv .table table {
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table th, .fixturesSection .sectionContainer .sectionContent .tableDiv .table th, .resultsSection .sectionContainer .sectionContent .tableDiv .table th {
+  padding: 10px 0 15px;
+  font-size: var(--fontSize_13px);
+  color: var(--greyTexts);
+  font-weight: 500;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table td, .fixturesSection .sectionContainer .sectionContent .tableDiv .table td, .resultsSection .sectionContainer .sectionContent .tableDiv .table td {
+  border-radius: var(--borderRadius);
+  padding: .8rem .5rem;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  font-size: var(--fontSize_13px);
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .red, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .red, .resultsSection .sectionContainer .sectionContent .tableDiv .table .red {
+  background: #eb6868;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .green, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .green, .resultsSection .sectionContainer .sectionContent .tableDiv .table .green {
+  background: #9af4ac;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .leader, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .leader, .resultsSection .sectionContainer .sectionContent .tableDiv .table .leader {
+  background: #6dde84;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .tr .pos, .logSection .sectionContainer .sectionContent .tableDiv .table .tr .points, .logSection .sectionContainer .sectionContent .tableDiv .table .tr .name, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .tr .pos, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .tr .points, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .tr .name, .resultsSection .sectionContainer .sectionContent .tableDiv .table .tr .pos, .resultsSection .sectionContainer .sectionContent .tableDiv .table .tr .points, .resultsSection .sectionContainer .sectionContent .tableDiv .table .tr .name {
+  font-weight: 600;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .tr .teamLogoDiv, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .tr .teamLogoDiv, .resultsSection .sectionContainer .sectionContent .tableDiv .table .tr .teamLogoDiv {
+  margin: 0 8px;
+  height: 30px;
+  width: 30px;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .tr .teamLogoDiv img, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .tr .teamLogoDiv img, .resultsSection .sectionContainer .sectionContent .tableDiv .table .tr .teamLogoDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .detailsLink, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .detailsLink, .resultsSection .sectionContainer .sectionContent .tableDiv .table .detailsLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 1.5rem;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a, .resultsSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a {
+  font-size: var(--fontSize_13px);
+  font-weight: 600;
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a .icon, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a .icon, .resultsSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a .icon {
+  color: var(--secondaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a:hover, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a:hover, .resultsSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a:hover {
+  color: var(--secondaryColor);
+}
+
+.logSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a:hover .icon, .fixturesSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a:hover .icon, .resultsSection .sectionContainer .sectionContent .tableDiv .table .detailsLink a:hover .icon {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.weeklyTeam .menDiv .topScorer, .weeklyTeam .menDiv .pow, .weeklyTeam .menDiv .tow {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: var(--borderRadius);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  border-top: 7px solid;
+  border-image-slice: 1;
+  padding-top: 1rem;
+  border-image-source: var(--linearGradient);
+  overflow: hidden;
+}
+
+.weeklyTeam .menDiv .topScorer .matchNumber, .weeklyTeam .menDiv .pow .matchNumber, .weeklyTeam .menDiv .tow .matchNumber {
+  display: block;
+  padding: 10px;
+  font-size: var(--fontSize_13px);
+  font-weight: 600;
+  color: var(--secondaryColor);
+}
+
+.weeklyTeam .menDiv .topScorer small, .weeklyTeam .menDiv .pow small, .weeklyTeam .menDiv .tow small {
+  opacity: .7;
+  font-size: var(--fontSize_13px);
+}
+
+.weeklyTeam .menDiv .topScorer .menTitle, .weeklyTeam .menDiv .pow .menTitle, .weeklyTeam .menDiv .tow .menTitle {
+  display: block;
+  padding: 5px 0;
+  background: var(--greyColor);
+  margin: 1rem 0;
+  border-radius: var(--borderRadius);
+  width: 100%;
+  font-weight: 600;
+  font-size: var(--fontSize_13px);
+}
+
+.weeklyTeam .menDiv .topScorer .imgDiv, .weeklyTeam .menDiv .pow .imgDiv, .weeklyTeam .menDiv .tow .imgDiv {
+  position: relative;
+  height: 180px;
+  width: auto;
+  overflow: hidden;
+}
+
+.weeklyTeam .menDiv .topScorer .imgDiv:hover img, .weeklyTeam .menDiv .pow .imgDiv:hover img, .weeklyTeam .menDiv .tow .imgDiv:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.weeklyTeam .menDiv .topScorer .imgDiv img, .weeklyTeam .menDiv .pow .imgDiv img, .weeklyTeam .menDiv .tow .imgDiv img {
+  position: absolute;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.weeklyTeam .menDiv .topScorer .infoDiv, .weeklyTeam .menDiv .pow .infoDiv, .weeklyTeam .menDiv .tow .infoDiv {
+  background: var(--linearGradient);
+  color: var(--whiteColor);
+  width: 100%;
+  padding: 1rem;
+}
+
+.weeklyTeam .menDiv .topScorer .infoDiv .honor, .weeklyTeam .menDiv .pow .infoDiv .honor, .weeklyTeam .menDiv .tow .infoDiv .honor {
+  font-weight: 600;
+  font-size: 16px;
+  float: left;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.weeklyTeam .menDiv .topScorer .infoDiv .topScorerText, .weeklyTeam .menDiv .pow .infoDiv .topScorerText, .weeklyTeam .menDiv .tow .infoDiv .topScorerText {
+  text-align: start;
+  float: left;
+}
+
+.weeklyTeam .menDiv .tow .menTitle {
+  display: block;
+  padding: 5px 0;
+  background: var(--greyColor);
+  margin: 1rem 0;
+  border-radius: var(--borderRadius);
+  width: 100%;
+  font-weight: 600;
+  font-size: var(--fontSize_13px);
+  text-align: center;
+}
+
+.weeklyTeam .menDiv .tow .imgsDiv {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.weeklyTeam .menDiv .tow .imgsDiv .singleplayer {
+  position: relative;
+  height: 100px;
+  width: 90px;
+  background: #11b6d0;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+
+.weeklyTeam .menDiv .tow .imgsDiv .singleplayer:hover .playerName {
+  top: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.weeklyTeam .menDiv .tow .imgsDiv .singleplayer .playerName {
+  position: absolute;
+  top: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#37003c), to(#37003c28));
+  background: linear-gradient(to top, #37003c, #37003c28);
+}
+
+.weeklyTeam .menDiv .tow .imgsDiv .singleplayer .playerName .name {
+  color: var(--whiteColor);
+  font-weight: 500;
+  text-align: center;
+}
+
+.weeklyTeam .menDiv .tow .imgsDiv .singleplayer .playerName .name blockquote {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.weeklyTeam .menDiv .tow .imgsDiv .singleplayer .playerImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.middleBanner {
+  height: 400px;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#3f2b56bc), to(#3f2b56d0)), url(./assets/klImages/celebration.jpg);
+  background: linear-gradient(to top, #3f2b56bc, #3f2b56d0), url(./assets/klImages/celebration.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.middleBanner .sectionText h1 {
+  color: var(--whiteColor);
+  font-weight: 800;
+  text-align: center;
+}
+
+.middleBanner .sectionText .button {
+  border: 2px solid var(--whiteColor);
+  background: transparent;
+}
+
+.middleBanner .sectionText .button:hover {
+  background: var(--whiteColor);
+}
+
+.middleBanner .sectionText .button:hover a {
+  color: var(--primaryColor);
+}
+
+.middleBanner .sectionText .button a {
+  color: var(--whiteColor);
+}
+
+.sponsors {
+  margin: 1rem 0;
+}
+
+.sponsors .sponsorsContainer {
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.sponsors .sponsorsContainer .sponsor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sponsors .sponsorsContainer .sponsor .swiperImg {
+  width: 100%;
+  height: auto;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  opacity: .5;
+}
+
+.sponsors .sponsorsContainer .sponsor .swiperImg:hover {
+  opacity: 1;
+}
+
+.newsSection {
+  position: relative;
+  border-top: 20px solid var(--primaryColor);
+}
+
+.newsSection::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 80%;
+  background: var(--linearGradient);
+  top: -5px;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.newsSection .newContent .singlePost {
+  max-width: 100%;
+  gap: .5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
+}
+
+.newsSection .newContent .singlePost .postImg {
+  height: 100px;
+  width: 150px;
+  background: var(--greyColor);
+}
+
+.newsSection .newContent .singlePost .postImg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.newsSection .newContent .singlePost .newsTxt {
+  width: 100%;
+}
+
+.newsSection .newContent .singlePost .newsTxt .title {
+  color: var(--secondaryColor);
+  font-weight: 600;
+  display: block;
+  padding: 10px 0;
+  font-style: italic;
+}
+
+.newsSection .newContent .singlePost .newsTxt p {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.newsSection .newContent .singlePost .newsTxt p::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(255, 255, 255, 0.99)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.99));
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+.newsSection .hide {
+  display: none;
+}
+
+.detailsBox {
+  position: fixed;
+  height: 100vh;
+  z-index: 1000;
+  background: #000000cb;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.detailsBox .detailsContainer {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--whiteColor);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 400px;
+  border-radius: var(--borderRadius);
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+  border-image-source: var(--linearGradient);
+  overflow: hidden;
+}
+
+.detailsBox .detailsContainer .icon {
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  background: var(--whiteColor);
+  color: var(--secondaryColor);
+  top: 0px;
+  right: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  font-size: 18px;
+}
+
+.detailsBox .detailsContainer .icon:hover {
+  color: var(--primaryColor);
+}
+
+.detailsBox .detailsContainer .detailsImg {
+  width: 50%px;
+  height: auto;
+  margin: 0 auto 1rem;
+  border-radius: var(--borderRadius);
+}
+
+.detailsBox .detailsContainer span {
+  padding: 0 .5rem 1rem;
+  max-width: 400px;
+}
+
+.detailsBox .detailsContainer .desc {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.detailsBox .detailsContainer ::-webkit-scrollbar {
+  width: 4px;
+  background: var(--greyColor);
+}
+
+.detailsBox .detailsContainer ::-webkit-scrollbar-thumb {
+  border-radius: var(--borderRadius);
+  background-color: var(--secondaryColor);
+}
+
+.detailsBox .detailsContainer .title {
+  color: var(--greyTexts);
+  font-weight: 600;
+}
+
+.detailsBox .detailsContainer small {
+  width: 80%;
+  margin: auto;
+  padding-top: .5rem;
+  color: var(--greyTexts);
+  border-top: 1px solid #c6c5c5;
+}
+
+.seeDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.gallerySection {
+  position: relative;
+  border-top: 20px solid var(--primaryColor);
+}
+
+.gallerySection::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 80%;
+  background: var(--linearGradient);
+  top: -5px;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.gallerySection .galleryContainer .imgDiv, .gallerySection .galleryContainer .small_imgDiv {
+  position: relative;
+  height: 150px;
+  width: auto;
+  overflow: hidden;
+}
+
+.gallerySection .galleryContainer .imgDiv:hover img, .gallerySection .galleryContainer .small_imgDiv:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.gallerySection .galleryContainer .imgDiv .iconDiv, .gallerySection .galleryContainer .small_imgDiv .iconDiv {
+  position: absolute;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 10%;
+  left: 5%;
+}
+
+.gallerySection .galleryContainer .imgDiv .iconDiv .icon, .gallerySection .galleryContainer .small_imgDiv .iconDiv .icon {
+  background: var(--bgColor);
+  color: var(--whiteColor);
+  padding: 5px;
+}
+
+.gallerySection .galleryContainer .imgDiv .iconDiv span, .gallerySection .galleryContainer .small_imgDiv .iconDiv span {
+  padding: 5px 7px;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  font-size: 16px;
+  -webkit-transform: translateX(-1.5px);
+          transform: translateX(-1.5px);
+  font-weight: 700;
+}
+
+.gallerySection .galleryContainer .imgDiv img, .gallerySection .galleryContainer .small_imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallerySection .galleryContainer .mainImage .imgDiv {
+  height: 200px;
+  overflow: hidden;
+}
+
+.gallerySection .galleryContainer .mainImage .infoDiv {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: var(--linearGradient);
+  color: var(--whiteColor);
+  width: 100%;
+  padding: 1rem;
+}
+
+.gallerySection .galleryContainer .mainImage .infoDiv .honor {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.funZone {
+  position: relative;
+  border-top: 20px solid var(--primaryColor);
+}
+
+.funZone::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 80%;
+  background: var(--linearGradient);
+  top: -5px;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.funZone .singleComment {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: var(--greyColor);
+  padding: 10px;
+  border-radius: var(--borderRadius);
+  border-bottom: 2px solid;
+  border-image-slice: 1;
+  border-image-source: var(--linearGradient);
+  overflow: hidden;
+}
+
+.funZone .singleComment .topDiv {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
+
+.funZone .singleComment .topDiv .commentImg {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 5px solid var(--whiteColor);
+  overflow: hidden;
+}
+
+.funZone .singleComment .topDiv .commentImg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.funZone .singleComment .topDiv .commentorName {
+  font-weight: 700;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin-left: 1rem;
+}
+
+.funZone .singleComment .topDiv .iconDiv {
+  position: absolute;
+  top: -5rem;
+  right: -3rem;
+}
+
+.funZone .singleComment .topDiv .iconDiv .icon {
+  font-size: 10rem;
+  font-weight: 700;
+  opacity: 1;
+  color: #e9e9e9;
+}
+
+.funZone .singleComment .commentTxt {
+  font-style: italic;
+}
+
+.funZone .newComment {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.funZone .newComment .formBanner {
+  height: 200px;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.791))), url(./assets/teamImage3.png);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.791)), url(./assets/teamImage3.png);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.funZone .newComment .formBanner .bannerText {
+  color: var(--whiteColor);
+  text-align: center;
+}
+
+.funZone .newComment .formBanner .bannerText h2 {
+  color: var(--whiteColor);
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.funZone .newComment .formBanner .bannerText p {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.funZone .newComment .formBanner .bannerText .icon {
+  font-size: 25px;
+}
+
+.funZone .newComment .form {
+  padding: 20px 0;
+  width: 100%;
+}
+
+.funZone .newComment .form .row {
+  margin-bottom: 10px;
+}
+
+.funZone .newComment .form .row label {
+  display: block;
+  padding-bottom: 5px;
+  font-size: var(--fontSize_13px);
+  font-weight: 500;
+}
+
+.funZone .newComment .form .row input, .funZone .newComment .form .row textarea {
+  padding: 10px;
+  border-radius: var(--borderRadius);
+  border: 2px solid transparent;
+  background: var(--greyColor);
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.funZone .newComment .form .row input:focus, .funZone .newComment .form .row textarea:focus {
+  outline: 2px solid var(--secondaryColor);
+}
+
+.funZone .newComment .form .row #image {
+  display: none;
+}
+
+.funZone .newComment .form .row .image {
+  padding: 5px 0;
+}
+
+.funZone .newComment .form .row .image:hover {
+  color: var(--secondaryColor);
+}
+
+.funZone .newComment .form .row .submitBtn {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+.funZone .newComment .form .row .submitBtn:hover {
+  background: var(--secondaryColor);
+}
+
+.footer {
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(-230deg, #37003c 1%, #963bfe 200%);
+}
+
+.footer .footerContent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.footer .col {
+  display: -ms-grid;
+  display: grid;
+  gap: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.footer .firstCol {
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer .firstCol .footerLogo {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 100px;
+  margin: 10px auto;
+}
+
+.footer .firstCol .text {
+  color: var(--whiteColor);
+  display: inline-block;
+  padding-bottom: 5px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--whiteColor);
+}
+
+.footer .firstCol p {
+  color: var(--whiteColor);
+  padding: .5rem 0;
+}
+
+.footer .firstCol .socials {
+  width: 100%;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.footer .firstCol .socials .icon {
+  color: var(--whiteColor);
+  font-size: 20px;
+}
+
+.footer .firstCol .socials .icon:hover {
+  color: var(--secondaryColor);
+}
+
+.footer h6 {
+  font-size: 13px;
+  color: var(--whiteColor);
+  padding-bottom: 5px;
+}
+
+.footer .footerLink {
+  color: var(--whiteColor);
+  font-size: 14px;
+}
+
+.footer .footerLink:hover {
+  color: var(--secondaryColor);
+  -webkit-transform: translateX(7px);
+          transform: translateX(7px);
+}
+
+.footer .copyRight {
+  width: 100%;
+  margin-top: 2rem;
+  background: rgba(128, 0, 0, 0.808);
+  padding: 1rem;
+}
+
+.footer .copyRight .copyRightDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer .copyRight .left {
+  font-weight: 700;
+}
+
+.footer .copyRight .middle {
+  max-width: 600px;
+}
+
+.aboutBanner {
+  padding: 4rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.778)), to(rgba(0, 0, 0, 0.671))), url(./assets/klImages/trophy.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.778), rgba(0, 0, 0, 0.671)), url(./assets/klImages/trophy.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.aboutBanner .bannerText {
+  color: var(--whiteColor);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.aboutBanner .bannerText h2 {
+  color: var(--whiteColor);
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.aboutBanner .bannerText p {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.aboutBanner .bannerText .icon {
+  font-size: 25px;
+}
+
+.aboutBanner .aboutButton {
+  position: absolute;
+  bottom: 0;
+  gap: 10px;
+}
+
+.aboutBanner .aboutButton a {
+  padding: 10px 15px;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  border-top-right-radius: var(--borderRadius);
+  border-top-left-radius: var(--borderRadius);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.aboutBanner .aboutButton a:hover {
+  background: var(--whiteColor);
+  color: var(--primaryColor);
+}
+
+.aboutBanner .aboutButton .aboutBtnActive {
+  background: var(--whiteColor);
+  color: var(--primaryColor);
+}
+
+.aboutBanner .aboutButton .activeBtn {
+  background-color: var(--whiteColor);
+  color: var(--primaryColor);
+}
+
+.mainInfo .sectionHeader {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.records {
+  position: relative;
+  border-top: 20px solid var(--primaryColor);
+}
+
+.records::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 80%;
+  background: var(--linearGradient);
+  top: -5px;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.records .sectionHeader {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.records .seasonMenu {
+  margin-bottom: 1rem;
+  overflow-x: none;
+}
+
+.records .seasonMenu .seasonList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+.records .seasonMenu .seasonList .season {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  font-size: var(--fontSize_13px);
+  font-weight: 500;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  width: 4rem;
+  text-align: center;
+  border: 1px dashed transparent;
+}
+
+.records .seasonMenu .seasonList .season:hover {
+  background-color: var(--whiteColor);
+  color: var(--primaryColor);
+  border: 1px dashed var(--primaryColor);
+}
+
+.records .seasonMenu .seasonList .activeBtn {
+  background-color: var(--whiteColor);
+  color: var(--primaryColor);
+  border: 1px dashed var(--primaryColor);
+}
+
+.records .seasonRecords .singleSeason .champion .imgDiv, .records .seasonRecords .mvp .imgDiv, .records .seasonRecords .seasonTopScorer .imgDiv, .records .seasonRecords .gk .imgDiv {
+  position: relative;
+  height: 180px;
+  width: auto;
+  overflow: hidden;
+  overflow: hidden;
+  border-radius: var(--borderRadius);
+}
+
+.records .seasonRecords .singleSeason .champion .imgDiv:hover img, .records .seasonRecords .mvp .imgDiv:hover img, .records .seasonRecords .seasonTopScorer .imgDiv:hover img, .records .seasonRecords .gk .imgDiv:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.records .seasonRecords .singleSeason .champion .imgDiv img, .records .seasonRecords .mvp .imgDiv img, .records .seasonRecords .seasonTopScorer .imgDiv img, .records .seasonRecords .gk .imgDiv img {
+  position: absolute;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.records .seasonRecords .singleSeason .champion .imgDiv .imgTag, .records .seasonRecords .mvp .imgDiv .imgTag, .records .seasonRecords .seasonTopScorer .imgDiv .imgTag, .records .seasonRecords .gk .imgDiv .imgTag {
+  position: absolute;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  padding: 5px 10px;
+  border-bottom-right-radius: var(--borderRadius);
+}
+
+.records .seasonRecords .singleSeason .champion .infoDiv, .records .seasonRecords .mvp .infoDiv, .records .seasonRecords .seasonTopScorer .infoDiv, .records .seasonRecords .gk .infoDiv {
+  position: relative;
+  background: var(--linearGradient);
+  padding: 1rem;
+  color: white;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.records .seasonRecords .singleSeason .champion .infoDiv::after, .records .seasonRecords .mvp .infoDiv::after, .records .seasonRecords .seasonTopScorer .infoDiv::after, .records .seasonRecords .gk .infoDiv::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 80%;
+  background: var(--primaryColor);
+  bottom: -5px;
+  right: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.records .seasonRecords .singleSeason .champion .infoDiv .honor, .records .seasonRecords .mvp .infoDiv .honor, .records .seasonRecords .seasonTopScorer .infoDiv .honor, .records .seasonRecords .gk .infoDiv .honor {
+  color: var(--whiteColor);
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.records .hide {
+  display: none;
+}
+
+.clubsSection .sectionHeader, .singleClubPage .sectionHeader {
+  width: 100%;
+  margin: auto auto 2rem;
+  padding: 10px;
+  background: var(--primaryColor);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clubsSection .sectionHeader .seasonYear, .singleClubPage .sectionHeader .seasonYear {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--whiteColor);
+}
+
+.clubsSection .sectionHeader .logoDiv img, .singleClubPage .sectionHeader .logoDiv img {
+  width: 80px;
+  height: auto;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.clubsSection .clubsContainer .singleClub, .clubsSection .clubsContainer .singlePlayer, .singleClubPage .clubsContainer .singleClub, .singleClubPage .clubsContainer .singlePlayer {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #cdcccc;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubTop, .clubsSection .clubsContainer .singlePlayer .singleClubTop, .singleClubPage .clubsContainer .singleClub .singleClubTop, .singleClubPage .clubsContainer .singlePlayer .singleClubTop {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubTop .leftRow .teamLogoDiv, .clubsSection .clubsContainer .singlePlayer .singleClubTop .leftRow .teamLogoDiv, .singleClubPage .clubsContainer .singleClub .singleClubTop .leftRow .teamLogoDiv, .singleClubPage .clubsContainer .singlePlayer .singleClubTop .leftRow .teamLogoDiv {
+  margin-right: 1rem;
+  height: 40px;
+  width: 40px;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubTop .leftRow .teamLogoDiv img, .clubsSection .clubsContainer .singlePlayer .singleClubTop .leftRow .teamLogoDiv img, .singleClubPage .clubsContainer .singleClub .singleClubTop .leftRow .teamLogoDiv img, .singleClubPage .clubsContainer .singlePlayer .singleClubTop .leftRow .teamLogoDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubTop .leftRow .clubName .name, .clubsSection .clubsContainer .singlePlayer .singleClubTop .leftRow .clubName .name, .singleClubPage .clubsContainer .singleClub .singleClubTop .leftRow .clubName .name, .singleClubPage .clubsContainer .singlePlayer .singleClubTop .leftRow .clubName .name {
+  font-weight: 600;
+  font-size: 15px;
+  display: block;
+  color: var(--primaryColor);
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubTop .rightRow .icon, .clubsSection .clubsContainer .singlePlayer .singleClubTop .rightRow .icon, .singleClubPage .clubsContainer .singleClub .singleClubTop .rightRow .icon, .singleClubPage .clubsContainer .singlePlayer .singleClubTop .rightRow .icon {
+  font-size: 25px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubTop .rightRow .icon:hover, .clubsSection .clubsContainer .singlePlayer .singleClubTop .rightRow .icon:hover, .singleClubPage .clubsContainer .singleClub .singleClubTop .rightRow .icon:hover, .singleClubPage .clubsContainer .singlePlayer .singleClubTop .rightRow .icon:hover {
+  color: var(--secondaryColor);
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubTop .transform, .clubsSection .clubsContainer .singlePlayer .singleClubTop .transform, .singleClubPage .clubsContainer .singleClub .singleClubTop .transform, .singleClubPage .clubsContainer .singlePlayer .singleClubTop .transform {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.clubsSection .clubsContainer .singleClub.active, .clubsSection .clubsContainer .singlePlayer.active, .singleClubPage .clubsContainer .singleClub.active, .singleClubPage .clubsContainer .singlePlayer.active {
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+  border-image-source: var(--linearGradient);
+}
+
+.clubsSection .clubsContainer .singleClub.active .singleClubHidden, .clubsSection .clubsContainer .singlePlayer.active .singleClubHidden, .singleClubPage .clubsContainer .singleClub.active .singleClubHidden, .singleClubPage .clubsContainer .singlePlayer.active .singleClubHidden {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 15px 0;
+}
+
+.clubsSection .clubsContainer .singleClub.active .rightRow, .clubsSection .clubsContainer .singlePlayer.active .rightRow, .singleClubPage .clubsContainer .singleClub.active .rightRow, .singleClubPage .clubsContainer .singlePlayer.active .rightRow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.clubsSection .clubsContainer .singleClub.active .rightRow .icon, .clubsSection .clubsContainer .singlePlayer.active .rightRow .icon, .singleClubPage .clubsContainer .singleClub.active .rightRow .icon, .singleClubPage .clubsContainer .singlePlayer.active .rightRow .icon {
+  color: var(--secondaryColor);
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubHidden, .clubsSection .clubsContainer .singlePlayer .singleClubHidden, .singleClubPage .clubsContainer .singleClub .singleClubHidden, .singleClubPage .clubsContainer .singlePlayer .singleClubHidden {
+  display: -ms-grid;
+  display: grid;
+  height: 0;
+  gap: 10px;
+  overflow-y: auto;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubHidden .title, .clubsSection .clubsContainer .singlePlayer .singleClubHidden .title, .singleClubPage .clubsContainer .singleClub .singleClubHidden .title, .singleClubPage .clubsContainer .singlePlayer .singleClubHidden .title {
+  font-weight: 700;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubHidden .stat, .clubsSection .clubsContainer .singlePlayer .singleClubHidden .stat, .singleClubPage .clubsContainer .singleClub .singleClubHidden .stat, .singleClubPage .clubsContainer .singlePlayer .singleClubHidden .stat {
+  display: -ms-grid;
+  display: grid;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubHidden .stat .res, .clubsSection .clubsContainer .singlePlayer .singleClubHidden .stat .res, .singleClubPage .clubsContainer .singleClub .singleClubHidden .stat .res, .singleClubPage .clubsContainer .singlePlayer .singleClubHidden .stat .res {
+  display: block;
+  padding: 5px 0 0;
+  font-weight: 600;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubHidden .statFlex, .clubsSection .clubsContainer .singlePlayer .singleClubHidden .statFlex, .singleClubPage .clubsContainer .singleClub .singleClubHidden .statFlex, .singleClubPage .clubsContainer .singlePlayer .singleClubHidden .statFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.clubsSection .clubsContainer .singleClub .singleClubHidden .statFlex .res, .clubsSection .clubsContainer .singlePlayer .singleClubHidden .statFlex .res, .singleClubPage .clubsContainer .singleClub .singleClubHidden .statFlex .res, .singleClubPage .clubsContainer .singlePlayer .singleClubHidden .statFlex .res {
+  padding: 5px 0 0;
+  font-weight: 600;
+}
+
+.clubsSection .clubsContainer .allPlayersBtn, .singleClubPage .clubsContainer .allPlayersBtn {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  width: 80%;
+  text-align: center;
+  border: none;
+}
+
+.clubsSection .clubsContainer .allPlayersBtn:hover, .singleClubPage .clubsContainer .allPlayersBtn:hover {
+  background: var(--linearGradient);
+}
+
+.clubsSection .clubsContainer .hiddenPlayers, .singleClubPage .clubsContainer .hiddenPlayers {
+  display: -ms-grid;
+  display: grid;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+.clubsSection .clubsContainer .showAll, .singleClubPage .clubsContainer .showAll {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.singleClubBanner {
+  padding: 4rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.778)), to(rgba(0, 0, 0, 0.671))), url(./assets/klImages/teamImage3.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.778), rgba(0, 0, 0, 0.671)), url(./assets/klImages/teamImage3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.singleClubPageBannerInfo .clubImageDiv {
+  height: 140px;
+  width: 140px;
+  border: 1px dashed var(--greyColor);
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  padding: 10px;
+}
+
+.singleClubPage .mainInfo {
+  margin: 1rem 0;
+}
+
+.singleClubPage .mainInfo .clubDesc {
+  padding: 1.5rem;
+}
+
+.singleClubPage .sectionHeader {
+  margin: auto auto .5rem;
+}
+
+.singleClubPage .singleClub {
+  width: 100%;
+  padding: 0px 0;
+  border-bottom: 1px solid #cdcccc;
+}
+
+.singleClubPage .singleClub .singleClubStat {
+  display: -ms-grid;
+  display: grid;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0;
+  gap: 10px;
+  overflow-y: auto;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.singleClubPage .singleClub .singleClubStat .title {
+  font-weight: 700;
+}
+
+.singleClubPage .singleClub .singleClubStat .stat, .singleClubPage .singleClub .singleClubStat .statFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.singleClubPage .singleClub .singleClubStat .stat .res, .singleClubPage .singleClub .singleClubStat .statFlex .res {
+  padding: 5px 0 0;
+  font-weight: 600;
+}
+
+.fixturesSection .singleFixture:not(.singleFixture:nth-child(1)) {
+  border-top: 1px solid #e7e7e7;
+}
+
+.menDiv .topScorer, .menDiv .pow, .menDiv .tow {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  border-radius: var(--borderRadius);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  border-top: 7px solid;
+  border-image-slice: 1;
+  padding-top: 1rem;
+  border-image-source: var(--linearGradient);
+  overflow: hidden;
+}
+
+.menDiv .topScorer .matchNumber, .menDiv .pow .matchNumber, .menDiv .tow .matchNumber {
+  display: block;
+  padding: 10px;
+  font-size: var(--fontSize_13px);
+  font-weight: 600;
+  color: var(--secondaryColor);
+}
+
+.menDiv .topScorer small, .menDiv .pow small, .menDiv .tow small {
+  opacity: .7;
+  font-size: var(--fontSize_13px);
+}
+
+.menDiv .topScorer .menTitle, .menDiv .pow .menTitle, .menDiv .tow .menTitle {
+  display: block;
+  padding: 5px 0;
+  background: var(--greyColor);
+  margin: 1rem 0;
+  border-radius: var(--borderRadius);
+  width: 100%;
+  font-weight: 600;
+  font-size: var(--fontSize_13px);
+}
+
+.menDiv .topScorer .imgDiv, .menDiv .pow .imgDiv, .menDiv .tow .imgDiv {
+  position: relative;
+  height: 180px;
+  width: auto;
+  overflow: hidden;
+}
+
+.menDiv .topScorer .imgDiv:hover img, .menDiv .pow .imgDiv:hover img, .menDiv .tow .imgDiv:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.menDiv .topScorer .imgDiv img, .menDiv .pow .imgDiv img, .menDiv .tow .imgDiv img {
+  position: absolute;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.menDiv .topScorer .infoDiv, .menDiv .pow .infoDiv, .menDiv .tow .infoDiv {
+  background: var(--linearGradient);
+  color: var(--whiteColor);
+  width: 100%;
+  padding: 1rem;
+}
+
+.menDiv .topScorer .infoDiv .honor, .menDiv .pow .infoDiv .honor, .menDiv .tow .infoDiv .honor {
+  font-weight: 600;
+  font-size: 16px;
+  float: left;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.menDiv .topScorer .infoDiv .topScorerText, .menDiv .pow .infoDiv .topScorerText, .menDiv .tow .infoDiv .topScorerText {
+  text-align: start;
+  float: left;
+}
+
+.menDiv .tow .menTitle {
+  display: block;
+  padding: 5px 0;
+  background: var(--greyColor);
+  margin: 1rem 0;
+  border-radius: var(--borderRadius);
+  width: 100%;
+  font-weight: 600;
+  font-size: var(--fontSize_13px);
+  text-align: center;
+}
+
+.menDiv .tow .imgsDiv {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.menDiv .tow .imgsDiv .singleplayer {
+  position: relative;
+  height: 100px;
+  width: 90px;
+  background: #11b6d0;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+
+.menDiv .tow .imgsDiv .singleplayer:hover .playerName {
+  top: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.menDiv .tow .imgsDiv .singleplayer .playerName {
+  position: absolute;
+  top: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#37003c), to(#37003c28));
+  background: linear-gradient(to top, #37003c, #37003c28);
+}
+
+.menDiv .tow .imgsDiv .singleplayer .playerName .name {
+  color: var(--whiteColor);
+  font-weight: 500;
+  text-align: center;
+}
+
+.menDiv .tow .imgsDiv .singleplayer .playerName .name blockquote {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.menDiv .tow .imgsDiv .singleplayer .playerImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.twitterSection {
+  position: relative;
+  border-top: 20px solid var(--primaryColor);
+}
+
+.twitterSection::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 80%;
+  background: var(--linearGradient);
+  top: -5px;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.twitterSection .pageDiv {
+  position: relative;
+  height: 400px;
+  overflow-y: scroll;
+  border-radius: var(--borderRadius);
+}
+
+.twitterSection ::-webkit-scrollbar {
+  width: 5px;
+  background: var(--greyColor);
+}
+
+.twitterSection ::-webkit-scrollbar-thumb {
+  border-radius: var(--borderRadius);
+  background-color: var(--secondaryColor);
+}
+
+.loginSection {
+  padding: .5rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem auto;
+}
+
+.loginSection .formContainer {
+  width: 270px;
+  height: 450px;
+  padding: 0 1rem;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background: whitesmoke;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.loginSection .formContainer .overlay {
+  position: absolute;
+  content: '';
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  z-index: 2;
+  top: -20%;
+  background: var(--whiteColor);
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+}
+
+.loginSection .formContainer form {
+  z-index: 1000;
+  width: 100%;
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+}
+
+.loginSection .formContainer form .rows .row label {
+  font-size: var(--fontSize_13px);
+  font-weight: 500;
+  display: block;
+  padding-bottom: .285rem;
+}
+
+.loginSection .formContainer form .rows .row input, .loginSection .formContainer form .rows .row select {
+  padding: 10px;
+  border-radius: var(--borderRadius);
+  border: 2px solid transparent;
+  background: var(--greyColor);
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.loginSection .formContainer form .rows .row input::-webkit-input-placeholder, .loginSection .formContainer form .rows .row select::-webkit-input-placeholder {
+  opacity: .5;
+}
+
+.loginSection .formContainer form .rows .row input:-ms-input-placeholder, .loginSection .formContainer form .rows .row select:-ms-input-placeholder {
+  opacity: .5;
+}
+
+.loginSection .formContainer form .rows .row input::-ms-input-placeholder, .loginSection .formContainer form .rows .row select::-ms-input-placeholder {
+  opacity: .5;
+}
+
+.loginSection .formContainer form .rows .row input::placeholder, .loginSection .formContainer form .rows .row select::placeholder {
+  opacity: .5;
+}
+
+.loginSection .formContainer form .rows .row input:focus, .loginSection .formContainer form .rows .row select:focus {
+  outline: 2px solid var(--secondaryColor);
+}
+
+.loginSection .formContainer form .rows .row input option, .loginSection .formContainer form .rows .row select option {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+.loginSection .formContainer form .rows .row .submitBtn {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+.loginSection .formContainer form .rows .row .submitBtn:hover {
+  background: var(--secondaryColor);
+}
+
+.loginSection .formContainer form .rows .row .registerLink {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.loginSection .formContainer form .rows .row .registerLink a {
+  font-weight: 500;
+  color: var(--secondaryColor);
+}
+
+.bodyFlex {
+  position: relative;
+  width: 100%;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+.sideBody {
+  display: none;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.453);
+  padding-top: 9rem;
+  max-width: 30%;
+}
+
+.sideBody .twitterSection {
+  height: 100%;
+}
+
+.sideBody .twitterSection .pageDiv {
+  position: relative;
+  max-height: 2000px;
+  overflow-y: scroll;
+  border-radius: var(--borderRadius);
+}
+
+.sideBody .postImg {
+  height: 100px;
+  width: 150px;
+  background: var(--greyColor);
+  padding: .5rem;
+}
+
+.mainBody {
+  width: 100%;
+}
+
+@media screen and (min-width: 400px) {
+  .mainBody .gallerySection .galleryContainer .smallImages {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .header .topSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mainBody .aboutBanner {
+    padding: 9rem 0 4rem;
+  }
+  .mainBody .show {
+    top: 22rem !important;
+  }
+  .mainBody .bannerSection {
+    padding: 6rem 3rem 1rem;
+  }
+  .mainBody .weeklyTeam {
+    padding-bottom: 5rem;
+  }
+  .mainBody .weeklyTeam .menDiv {
+    position: relative;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .weeklyTeam .menDiv .tow {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  .mainBody .weeklyTeam .detailsLink {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+  }
+  .mainBody .newsSection .newContent {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .gallerySection .galleryContainer .smallImages {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .records .singleSeason {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .table__WeekPlayers .menDiv .tow .imgsDiv .singlePlayer {
+    height: 300px !important;
+    width: 300px !important;
+  }
+  .mainBody .funZone .sectionContent .comments {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .loginSection .formContainer {
+    width: 360px;
+  }
+  .footer .footerContent {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .footerContent .firstCol {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .mainBody .section {
+    padding: 4.5rem 0 2rem;
+  }
+  .mainBody .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .mainBody .logSection .sectionContent {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .logSection .sectionContent .tableDiv {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  .mainBody .allFixtures, .mainBody .allResults {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .table__WeekPlayers .weekPlayers {
+    padding: 4.5rem 0 2rem;
+  }
+  .mainBody .table__WeekPlayers .weekPlayers .menDiv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header .lowerSection .navBarBtn {
+    display: none;
+  }
+  .header .lowerSection .navBar, .header .lowerSection .navList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+  .header .lowerSection .navBar small, .header .lowerSection .navList small {
+    display: none;
+  }
+  .header .lowerSection .navBar .navLink, .header .lowerSection .navList .navLink {
+    color: var(--whiteColor);
+  }
+  .header .lowerSection .navBar .navLink:hover, .header .lowerSection .navList .navLink:hover {
+    color: var(--secondaryColor);
+  }
+  .header .lowerSection .navBar .button, .header .lowerSection .navList .button {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    text-align: center;
+    background: var(--whiteColor);
+  }
+  .header .lowerSection .navBar .button:hover, .header .lowerSection .navList .button:hover {
+    background: var(--secondaryColor);
+  }
+  .header .lowerSection .navBar .button a, .header .lowerSection .navList .button a {
+    color: var(--primaryColor);
+  }
+  .mainBody .aboutBanner {
+    padding: 13rem 0 6rem;
+  }
+  .mainBody .weeklyTeam {
+    padding-bottom: 7rem;
+  }
+  .mainBody .newComment .formContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .newComment .formContainer .formBanner {
+    height: 100%;
+  }
+  .mainBody .newComment .formContainer .form {
+    padding: 0 1rem;
+  }
+  .mainBody .gallerySection .galleryContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBody .gallerySection .galleryContainer .mainImage {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .mainBody .aboutSection .sectionContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mainBody .weeklyTeam .menDiv {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .mainBody .weeklyTeam .menDiv .tow {
+    grid-column: initial;
+  }
+  .mainBody .funZone .sectionContent .comments {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .header .lowerSection {
+    padding: 10px 5rem;
+  }
+  .bodyFlex {
+    width: 90%;
+  }
+  .mainBody {
+    width: 70%;
+  }
+  .mainBody :root {
+    --fontSize_13px: 13px;
+  }
+  .mainBody ::html {
+    font-size: 90%;
+  }
+  .mainBody .section {
+    padding: 4rem 0;
+  }
+  .mainBody .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .mainBody .bannerSection .title {
+    font-size: 40px;
+  }
+  .mainBody .bannerSection .subTitle {
+    font-size: 20px;
+  }
+  .mainBody .middleBanner .sectionText {
+    max-width: 400px;
+  }
+  .mainBody .middleBanner .sectionText h1 {
+    font-size: 30px;
+  }
+  .sideBody {
+    display: block;
+  }
+  .footer {
+    margin: auto;
+  }
+  .footer .footerContent {
+    width: 60%;
+    padding: 2rem 0;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .footer .footerContent .firstCol {
+    grid-column: initial;
+    grid-row: initial;
+  }
+  .footer .copyRight .copyRightDiv {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  body {
+    zoom: 2;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--greyColor);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--borderRadius);
+  background-color: var(--secondaryColor);
+  cursor: pointer;
+}
+
+::-moz-selection {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+::selection {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+/*# sourceMappingURL=main.css.map */

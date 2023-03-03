@@ -31,3 +31,17 @@
     height: 100%;
 
 }
+
+@media only screen and (max-width: 600px){
+    .profile-container{
+        padding-left:49px !important;
+    }
+
+    .profile-row{
+        flex-direction: column;
+    }
+
+    .profile-box{
+        width: 100%;
+    }
+}

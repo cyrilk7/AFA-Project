@@ -9,7 +9,6 @@ html, body{
     overflow-x: hidden;
 }
 
-
 body{
     background-image: url("../images/bg.png");
     background-size: cover;
@@ -51,7 +50,7 @@ padding-bottom: 20px;
     display: flex;
 }
 .navbar-local ul li{
-    margin-left: 40px;
+    margin-left:2rem;
 }
 
 .logo-local{
@@ -61,7 +60,7 @@ padding-bottom: 20px;
 
 .logobox-local{
     margin-left: 7%;
-    margin-right: 7%;
+    /* margin-right: 7%; */
 
 }
 
@@ -92,6 +91,17 @@ h3{
     color: whitesmoke;
 }
 
+.players{
+    width: 112px;
+    height: 52px;
+    background: linear-gradient(132.37deg, #FF0F00 21.59%, #B45C57 104.34%);
+    border-radius: 6px;
+    margin-left: 119px;
+    font-family: 'Poppins';
+    color: whitesmoke;
+
+}
+
 p{
     color: #D23B32;
     font-weight: 600;
@@ -114,11 +124,13 @@ p{
     margin-top: 0px; */
     
 }
-
+.content-box-local h1{
+    font-size: 56px;
+}
 h1{
     font-style: normal;
     font-weight: 700;
-    font-size: 56px;
+    font-size: 42px;
     line-height: 80px;
     color: whitesmoke;
 }
@@ -317,7 +329,7 @@ label .p-white{
 }
 
 .modal-content{
-    background: #D9D9D9!important;
+    background: white!important;
 }
 
 #profile-img{
@@ -438,7 +450,20 @@ label .p-white{
         font-size: 10px;
         
     }
-    
 
 
+
+}
+
+.player-modal{
+    display:flex; 
+}
+
+.edit-icon{
+    /* padding-top:22px; */
+    padding: 22px 8px;
+}
+
+.icons{
+    margin-left: 20px;
 }
