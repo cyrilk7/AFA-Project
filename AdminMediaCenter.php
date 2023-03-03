@@ -121,7 +121,7 @@
                            <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink"><h3>Elite vs Kasanoma - Match Highlights </h3></a>
                         </div>
                         <a href = " "> 
-                            APL • Upload Date
+                            APL
                             </a>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                      <h3><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink">Northside vs Red Army</h3>
                     </div>
                     <a href = "">
-                        APL • Upload Date   
+                        APL   
                     </a>
     
                 </div>
@@ -152,7 +152,7 @@
                        <h3><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink">Northside Ladies vs Red Army Women - Match Highlights </h3>
                     </div>
                     <a href = " "> 
-                        AWPL • Upload Date
+                        AWPL
                         </a>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                        <h3><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink">Elite Ladies vs Kasanoma Women - Match Highlights </h3>
                     </div>
                     <a href = " "> 
-                        AWPL • Upload Date
+                        AWPL
                         </a>
                 </div>
             </div>
@@ -180,7 +180,7 @@
                        <h3><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink"> Red Army vs Kasanoma - Match Highlights </h3>
                     </div>
                     <a href = " "> 
-                        AFA • Upload Date
+                        AFA
                         </a>
                 </div>
             </div>
@@ -194,7 +194,7 @@
                        <h3><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink"> Legends United vs Elite FC </h3>
                     </div>
                     <a href = " "> 
-                        AFA • Upload Date
+                        AFA
                         </a>
                 </div>
             </div>
@@ -208,7 +208,7 @@
                        <h3><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink"> APL Press Conference </h3>
                     </div>
                     <a href = " "> 
-                        AFA • Upload Date
+                        AFA
                         </a>
                 </div>
             </div>
@@ -222,7 +222,7 @@
                        <h3><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink"> Fan Reactions </h3>
                     </div>
                     <a href = " "> 
-                        AFA Social• Upload Date
+                        AFA Social
                         </a>
                 </div>
             </div>
@@ -236,16 +236,103 @@
                        <h3><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" class = "vidlink"> APL Press Conference </h3>
                     </div>
                     <a href = " "> 
-                        AFA • Upload Date
+                        AFA 
                         </a>
                 </div>
             </div>
     
-    
-            </div>
-        </div>
+            <?php
+//check if user came through profile page since the teamIDs have been inserted on that 
+    // if (isset($_GET['teamid'])){
+        echo "<br>";
+
+
+        //Setup database connection
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "afa_db";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if($conn -> connect_error){
+            die("Error encountered - ".$conn->connect_error);
+        }
+        else{
+            // echo "<h1>Database connection is good to go </h1>";
+            // echo "<h1>Attempting retrieval</h1>";
+
+            //Select relevant player data (those from this specific team) from the database
+            $sql = "SELECT * from mediacentre";
+
+            $result = mysqli_query($conn, $sql);
+
+            if($result){
+                
+                // echo "<h3> Result returned valid values</h3>";
+                // echo "<br>";
+                
+                // $videoLink = $row['videoLink'];
+                // $matchName = $row['matchName'];
+                // $thumbnail = $row['thumbnail'];
+
+                // echo $videoLink;
+                // echo "<br>";
+                // echo $matchName;
+                // echo "<br>";
+                // echo "<img src='Image/".$thumbnail."' />";
+
+                
+                while($row = mysqli_fetch_assoc($result)){
+                    $videoLink = $row['videoLink'];
+                    $matchName = $row['matchName'];
+                    $thumbnail = $row['thumbnail'];
+                echo
+                // '<div class = "video">
+                //     <div class = "thumbnail" >
+                //         <a href = '.$videoLink.'><img id = "Image6" src ="images/Media9.png"></a>
+                //     </div>
+                //     <div class = "vid-info">
+                //         <div class = "title">
+                //            <h3><a href ='.$videoLink.' class = "vidlink">'.$matchName.'</h3>
+                //         </div>
+                //         <a href = " "> 
+                //             AFA
+                //             </a>
+                //     </div>
+                // </div>'
+                '<div class = "video">
+                <div class = "thumbnail" >
+                    <a href = '.$videoLink.'><img src="Image/'.$thumbnail.'/></a>
+                </div>
+                <div class = "vid-info">
+                    <div class = "title">
+                       <h3><a href = '.$videoLink.' class = "vidlink"> '.$matchName.' </h3>
+                    </div>
+                    <a href = " "> 
+                        AFA 
+                        </a>
+                </div>
+            </div>';
+                    // echo $currPlayerID;
+
+
+                // }
+                //<a href = "Delete_player_proc.php?playerID= '.$currPlayerID.'">DELETE</a>
+
+            //    echo" <script type = "text/javascript">
+            //     </script>
+            //     "
+            }
+            echo "   </div>
         
-    </main>
+            </main>";
+        }
+    }
+    ?>
+            </div>
+     
+
     <script src="addVideos.js"></script>
 </body>
 </html>

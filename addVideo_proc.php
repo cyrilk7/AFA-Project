@@ -56,6 +56,8 @@
         if($conn -> query($sql) === TRUE){
 
             echo "Haha successs";
+            header("Location: AdminMediaCenter.php");
+            exit();
         }
         else{
             echo "Error ". $conn->error . "<br> SQL = " . $sql; 

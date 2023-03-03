@@ -24,7 +24,7 @@
                     <li><a href="Admin_Profile.php">Profile</a></li>  
                     <li><a href="AdminMediaCenter.php">Media Center</a></li>  
                     <!-- <li><a href="login.html"><button id="login"> Edit </button>   </a></li> -->
-                    <li><button id="login" data-toggle="modal" data-target="#loginModal"> Edit </button> </li>
+                    <li><a href = "logout.php"><button id="login" data-toggle="modal" data-target="#loginModal"> Logout </button></a> </li>
                     
                                
                 </ul>
