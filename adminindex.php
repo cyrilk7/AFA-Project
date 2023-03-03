@@ -18,11 +18,11 @@
                     <img class="logo-local" src="images/Group 1.svg" alt="logo">
                 </div>
                 <ul class="links-local">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="adminindex.php">Home</a></li>
                     <li><a href="standings.php">League Tables</a></li>
                     <li><a href="statistics.php">Statistics</a></li>
-                    <li><a href="profile.php">Profile</a></li>  
-                    <li><a href="media.php">Media Center</a></li>  
+                    <li><a href="Admin_Profile.php">Profile</a></li>  
+                    <li><a href="AdminMediaCenter.php">Media Center</a></li>  
                     <!-- <li><a href="login.html"><button id="login"> Edit </button>   </a></li> -->
                     <li><button id="login" data-toggle="modal" data-target="#loginModal"> Edit </button> </li>
                     
