@@ -18,9 +18,9 @@
                 </div>
                 <ul class="links-local">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="standings.php">League Tables</a></li>
-                    <li><a href="statistics.php">Statistics</a></li>
-                    <li><a href="profile.php">Profile</a></li>  
+                    <li><a href="standings.html">League Tables</a></li>
+                    <li><a href="#">Statistics</a></li>
+                    <li><a href="#">Profile</a></li>  
                     <li><a href="media.php">Media Center</a></li>  
                     <li><a href="login.php"><button id="login"> Log In </button>   </a></li>
                     <!-- <li><a href="login.html"><button id="login" data-toggle="modal" data-target="#loginModal"> Log In </button>   </a></li> -->

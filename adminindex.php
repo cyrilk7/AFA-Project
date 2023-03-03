@@ -1,44 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashesi Sports+</title>
+    <!-- Link css -->
+    <link rel="stylesheet" href="trial/main.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
-    <title> Ashesi Sports+ </title>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- link icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- link swiper.min.css -->
+    <link rel="stylesheet" href="trial/swiper-bundle.min.css">
+
 </head>
 <body>
-    <script src="./bootstrap/js/bootstrap.js"></script>
-    
-    <div class="navbar-local">
-            <div class="container-local">
-                <div class= logobox-local>
-                    <img class="logo-local" src="images/Group 1.svg" alt="logo">
+    <div class="header">
+
+        <div class="lowerSection">
+                <div class="logoDiv" style="color: white; font-size: 25px">
+                    <i class="uil uil-football icon" style="font-size: 25px"></i>
+                    SPORTS+
                 </div>
-                <ul class="links-local">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="standings.php">League Tables</a></li>
-                    <li><a href="statistics.php">Statistics</a></li>
-                    <li><a href="profile.php">Profile</a></li>  
-                    <li><a href="media.php">Media Center</a></li>  
-                    <!-- <li><a href="login.html"><button id="login"> Edit </button>   </a></li> -->
-                    <li><button id="login" data-toggle="modal" data-target="#loginModal"> Edit </button> </li>
-                    
-                               
-                </ul>
-
-
+            
+            <div class="navBar">
+                <ul class="navList">
+                    <li class="navItem"><a href="adminindex.php" class="navLink">Home</a></li>
+                    <li class="navItem"><a href="standings.html" class="navLink">LeagueTable</a></li>
+                    <li class="navItem"><a href="" class="navLink">Statistics</a></li>
+                    <li class="navItem"><a href="profiles.html" class="navLink">Profiles</a></li> <!-- add charts so they see team performance -->
+                    <li class="navItem"><a href="" class="navLink">Results</a></li>
+                    <li class="navItem"><a href="addUser.php" class="navLink">Users</a></li> 
+                    <li class="navItem"><a href="media.php" class="navLink">MediaCenter</a></li>
+                  </ul>
+                  <div class="button">
+                      <a href="logout.php">LOG OUT</a>
+                  </div>
+                  <small>*Only club representatives.</small>
             </div>
+            <div class="navBarBtn">
+                <i class="uil uil-bars icon"></i>
+            </div>
+        </div>
+
     </div>
+        
+    <!-- <div class="aboutBanner" style="padding: 90px 0 10px;">
+      <span class="bannerText">
+          <i class="uil uil-constructor icon"></i>
+          <p>Sports+</p>
+      </span>
+    </div> -->
+
+
     <div class="content-box-local">
         <p> Sports Management Web Application </p>
         <h1> The New Era of the AFA </h1>
         <p class="p-white"> We bring you everything you need, all in one place. </p>
-        <button id="question-button"> Questions? </button>
-        <a href="#"><button class="long-button"> Let's begin </button></a>
-        
+        <button id="question-button"> Questions? </button> 
+        <!-- <a href="mailto:afa@ashesi.edu.gh" target="_blank" id="question-button"> Questions?  -->
+        </a>
+        <a href="#"><button class="long-button"> Let's begin </button></a> 
     </div>
 
     <div id="fixtures-box">
@@ -47,17 +70,10 @@
             <!-- <div id="kasanoma-img">
                 <img src="images/kasanoma.svg" alt="" style="width: 100%; height:100%;">
             </div> -->
-            
-
         </div>
-
         <div class="box-1">
-
         </div>
-        
     </div>
-
-
 
     <!-- modal goes here -->
     <div class="modal fade" tabindex="-1" id="loginModal" role="dialog">
@@ -105,30 +121,38 @@
         </div>
     </div>
 
-
-
-    <!-- <div class="modal" tabindex="-1" id="loginModal" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title"> Add New Fixture </h1>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+    
+         
+     <!-- footer section starts here =============================================================-->
+    <div class="footer">
+        <div class="copyRight">
+            <div class="copyRightDiv">
+                <span class="middle"><a href="results.html" style="color: gray;">Table</a></span>
+                <span class="middle"><a href="news.html" style="color: gray;">Transfers</a> </span>
+                <span></span>
+                <span class="middle" style="color: white;">Contact Us:
+                    <a href="https://www.instagram.com/ashesi_football" target="_blank" style="color: white;"> <!-- Switch to instagram -->
+                        <i class="uil uil-instagram icon"></i>
+                    </a>
+                    <a href="mailto:afa@ashesi.edu.gh" target="_blank" style="color: white;">
+                        <i class="uil uil-envelope-heart icon"></i>
+                    </a>
+                    <a href="https://www.twitter.com/AshesiFootball" target="_blank" style="color: white;"> <!-- Switch to twitter -->
+                        <i class="uil uil-twitter icon"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" style="color: white;">
+                        <i class="uil uil-youtube icon"></i>
+                    </a>
+                </span>
             </div>
-            <div class="modal-body">
-  
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Save changes</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
     </div>
 
-    <script src="./bootstrap/js/bootstrap.js"></script>
-     -->
+    <!-- footer section ends here =============================================================-->
+
+    <!-- swiper.js link -->
+    <script src="trial/swiper-bundle.min.js"></script>
+    <!-- link javascript -->
+    <script src="trial/main.js"></script>
 </body>
 </html>
